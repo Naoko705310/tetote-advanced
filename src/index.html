@@ -36,13 +36,52 @@
   <script defer src="./assets/js/script.js?v=250905_1021"></script>
 </head>
 <body>
-  <header>
-
-  </header>
-  <main>
-    <div class="inner">
-      <p class="test">変更のテスト</p>
+  <header class="header js-header">
+    <div class="header__inner">
+      <!-- ロゴ -->
+      <h1 class="header__logo header-logo">
+        <a href="index.html">
+          <img src="./assets/images/common/tetote-logo-white 1.png" alt="TETOTEロゴ" width="250" height="61">
+        </a>
+      </h1>
+  
+      <!-- ナビゲーション -->
+      <nav class="header__nav header-nav">
+        <ul>
+          <li><a href="#" class="button button--black">募集要項</a></li>
+          <li><a href="#" class="button button--accent">ENTRY</a></li>
+        </ul>
+      </nav>
+  
+      <!-- ハンバーガーメニュー -->
+      <button id="hamburger-menu" class="header__hamburger hamburger js-hamburger" aria-label="メニューを開く" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="hamburger-text">MENU</span>
+      </button>
     </div>
+  </header>
+  
+  <main>
+    <!-- 共通の部品 -->
+    <section class="top-fv">
+      <div class="top-fv__inner inner">
+        <a href="#" class="button">VIEW MORE</a>
+        <a href="#" class="button button--entry">ENTRY</a>
+        <a href="#" class="button button--entry button--entry-black">ENTRY</a>
+        <a href="#" class="button button--entry button--entry-accent">ENTRY</a>
+
+      </div>
+    </section>
+
+
+
+
+
+
+
+
   </main>
   <footer>
 

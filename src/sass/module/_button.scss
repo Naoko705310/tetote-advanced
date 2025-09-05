@@ -1,0 +1,108 @@
+@use "global" as *;
+
+/* ===============================
+   ボタン ベース
+=============================== */
+.button {
+  width: 100%;
+  max-width: rem(355);
+  font-family: $second-font-family;
+  font-size: rem(20);
+  color: $black;
+  font-weight: $normal;
+  line-height: 1;
+  display: inline-block;
+  text-align: center;
+  padding: rem(30) 0;
+  background-color: #ffffff;
+  border: 1px solid $black;
+  position: relative;
+  z-index: 1;
+  transition: .3s;
+}
+
+// 右矢印（黒）
+.button:after {
+  content: "";
+  display: inline-block;
+  width: rem(20);
+  height: rem(20);
+  background-image: url("../../assets/images/common/arrow-right-black.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  right: rem(20);
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s, background-image 0.3s;
+}
+
+/* ===============================
+   バリエーション
+=============================== */
+/* 下層ページ共通のENTRYボタン */
+.button.button--entry {
+  font-size: rem(16);
+  background-color: $color-accent;
+  width: 100%;
+  max-width: rem(556);
+  padding: rem(27) 0;
+
+  @include mq(md) {
+    max-width: rem(556);
+  }
+}
+
+
+/* ヘッダーの黒ENTRYボタン */
+.button.button--entry.button--entry-black {
+  width: rem(126);
+  font-size: rem(14);
+  background-color: $black;
+  color: $white;
+  padding: rem(14) 0;
+}
+
+/* ヘッダーの黒ENTRYボタンでは矢印非表示 */
+.button.button--entry.button--entry-black::after {
+  content: none;
+}
+
+/* ヘッダーのアクセントカラーENTRYボタン */
+.button.button--entry.button--entry-accent {
+  width: rem(126);
+  font-size: rem(14);
+  background-color: $color-accent;
+  color: $white;
+  padding: rem(14) 0;
+}
+
+/* ヘッダーのアクセントカラーENTRYボタンでも矢印非表示 */
+.button.button--entry.button--entry-accent::after {
+  content: none;
+}
+
+/* ===============================
+   hover
+=============================== */
+/* 通常ボタン hover */
+.button:hover {
+  background-color: $black;
+  color: $white;
+}
+
+.button:hover:after {
+  background-image: url("../../assets/images/common/arrow-right-white.svg");
+}
+
+/* 黒ボタン hover */
+.button.button--entry.button--entry-black:hover {
+  background-color: #ffffff; 
+  color: $black;
+}
+/* アクセントカラーボタン hover */
+.button.button--entry.button--entry-accent:hover {
+  background-color: $color-main; 
+}
+

@@ -1,0 +1,71 @@
+@use "global" as *;
+
+.header {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: pink;
+  // background: transparent;
+  z-index: 1000;
+  transition: background 0.3s ease;
+}
+
+.header__inner {
+  padding:rem(26) rem(30);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  width: rem(154);
+  height: rem(38);
+  position: relative;
+  z-index: 9999;
+  @include mq(md) {
+    width: rem(250);
+    height: rem(61);
+  }
+}
+
+.header-logo {
+
+}
+
+.header__nav {
+
+}
+
+.header-nav {
+
+}
+
+
+
+.header__hamburger {
+
+}
+
+.hamburger {
+
+}
+
+.js-hamburger {
+
+}
+
+.hamburger-text {
+
+}
+
+
+
+
+
+
+
+
+
+
