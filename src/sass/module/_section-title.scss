@@ -1,0 +1,49 @@
+@use "global" as *;
+
+.section-title {
+  width: 100%;
+  display: flex;
+  position: relative;
+  z-index: 1;
+}
+
+// 背景の透かし文字
+.section-title__bg {
+  display: block;
+  font-family: $third-font-family;
+  font-size: rem(80);
+  color: rgba(151, 151, 151, 0.1); // 10%の透明度 #979797
+  font-weight: $normal;
+  line-height: 1;
+  white-space: nowrap; // 改行させない
+  position: relative;
+  @include mq(md) {
+    font-size: rem(136);
+  }
+}
+
+// 表示されるメインタイトル
+.section-title__main {
+  font-family: $base-font-family;
+  font-size: rem(32);
+  color: $black;
+  font-weight: $bold;
+  line-height: 1;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  z-index: 1;
+  @include mq(md) {
+    font-size: rem(52);
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.section-title__main--first {
+  display: inline-block; // 下線の制御をしやすくする
+  border-bottom: 3px solid $black; // 下線の太さ・色を調整
+  padding-bottom: 0.1em; // 文字と線の間隔を少し調整
+}
+
