@@ -1,0 +1,103 @@
+@use "global" as *;
+
+
+.blog-card {
+  display: grid;
+  grid-template-columns: calc(121 / 341 * 100%) calc(220 / 341 * 100%);
+  border-radius: rem(10);  // 角丸
+  overflow: hidden;        // 内側の img も丸める
+  background-color: $white;
+  @include mq(md) {
+    grid-template-columns: calc(156 / 452 * 100%) calc(296 / 452 * 100%);
+  }
+}
+
+.blog-card__image {
+  position: relative;
+}
+
+.blog-card__image::before {
+  content: "";
+  display: block;
+  padding-top: calc(121 / 121 * 100%);
+}
+
+.blog-card__image img {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+// カードのbody
+.blog-card__body {
+  display: flex;
+  flex-direction: column;
+  padding: rem(9) rem(7) rem(5) rem(18);
+}
+
+.blog-card__category {
+  display: flex;
+}
+
+// カテゴリーのアイコン
+.blog-card__icon {
+  width: rem(12);
+  height: rem(14);
+  object-fit: contain;
+}
+
+// カテゴリーのテキスト
+.blog-card__category span {
+  font-family: $base-font-family;
+  font-size: rem(12);
+  color: $black;
+  font-weight: $regular;
+  line-height: 1;
+  margin-left: rem(4);
+  @include mq(md) {
+    font-size: rem(14);
+  }
+}
+
+// ブログのタイトル
+.blog-card__title {
+  font-family: $base-font-family;
+  font-size: rem(14);
+  color: $black;
+  font-weight: $bold;
+  line-height: 1.5;
+  margin-top: rem(9);
+  @include mq(md) {
+    font-size: rem(18);
+  }
+}
+
+.blog-card__title a {
+  text-decoration: underline;       // 下線を付ける
+  text-decoration-thickness: 1px;   // 下線の太さを調整（任意）
+  text-underline-offset: 2px;       // 文字と線の間隔を調整（任意）
+  color: inherit;                   // 親の文字色を引き継ぐ
+}
+
+.blog-card__title a:hover {
+  text-decoration-color: $color-accent; // hover時に色を変える場合
+}
+
+.blog-card__date {
+  font-family: $base-font-family;
+  font-size: rem(12);
+  color: $black;
+  font-weight: $regular;
+  line-height: 1;
+  margin-top: auto;
+}
+
+
+
+
+
