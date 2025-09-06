@@ -8,7 +8,7 @@
   overflow: hidden;        // 内側の img も丸める
   background-color: $white;
   @include mq(md) {
-    grid-template-columns: calc(156 / 452 * 100%) calc(296 / 452 * 100%);
+    grid-template-columns: rem(156) 1fr;
   }
 }
 
@@ -38,6 +38,9 @@
   display: flex;
   flex-direction: column;
   padding: rem(9) rem(7) rem(5) rem(18);
+  @include mq(md) {
+    padding: rem(20) rem(23) rem(20) rem(21);
+  }
 }
 
 .blog-card__category {
@@ -74,6 +77,7 @@
   margin-top: rem(9);
   @include mq(md) {
     font-size: rem(18);
+    margin-top: rem(23);
   }
 }
 
