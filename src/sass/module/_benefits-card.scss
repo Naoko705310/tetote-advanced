@@ -7,6 +7,9 @@
 .benefits-card__heading {
   position: relative;
   padding-bottom: rem(15);
+  @include mq(md) {
+    padding-bottom: 0;
+  }
 }
 
 
@@ -21,6 +24,9 @@
   margin-right: auto;
   margin-left: auto;
   position: relative;
+  @include mq(md) {
+    width: 100%;
+  }
 }
 
 // 縦書き英文字タイトル
@@ -99,6 +105,7 @@
   white-space: nowrap;
   @include mq(md) {
     font-size: rem(32);
+    bottom: rem(9);
     padding: rem(5) rem(7);
   }
 }

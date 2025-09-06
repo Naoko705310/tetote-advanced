@@ -1,0 +1,12 @@
+@use "global" as *;
+
+.benefits-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(36);
+  @include mq(md) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(94);
+    padding: 0 rem(35);
+  }
+}
