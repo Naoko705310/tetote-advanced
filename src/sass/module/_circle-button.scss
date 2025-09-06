@@ -1,0 +1,47 @@
+@use "global" as *;
+
+.circle-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(58);
+  height: rem(58);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  position: relative;
+  text-decoration: none;
+}
+
+/* 擬似要素で矢印を描画 */
+.circle-button::before {
+  content: "→";
+  font-size: rem(20);
+  transition: color 0.3s ease;
+}
+
+/* 黒背景ボタン */
+.circle-button--black {
+  background-color: $black;
+  color: $white;
+}
+
+.circle-button--black::before {
+  color: $white;
+}
+
+/* 白背景ボタン */
+.circle-button--white {
+  background-color: $white;
+  border: 1px solid $black;
+  color: #222;
+}
+
+.circle-button--white::before {
+  color: $black;
+}
+
+/* hover時の拡大 */
+.circle-button:hover {
+  width: rem(70);
+  height: rem(70);
+}
