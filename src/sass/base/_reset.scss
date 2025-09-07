@@ -58,6 +58,7 @@ img {
 }
 
 /* Natural flow and rhythm in articles by default */
+// article に勝手にmarginをつけないようにコメントアウト
 // article > * + * {
 //   margin-top: 1em;
 // }

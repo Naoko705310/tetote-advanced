@@ -6,8 +6,6 @@
   text-align: center;
   padding: rem(24) rem(23) rem(29) rem(25);
   @include mq(md) {
-    max-width: rem(956);
-    margin: 0 auto;
     padding: rem(50) 0;
   }
 }

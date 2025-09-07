@@ -1,0 +1,46 @@
+@use "global" as *;
+
+.cta__inner {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw); // 左端まで広げる
+  margin-right: calc(50% - 50vw); // 右端まで広げる
+}
+
+.cta__image {
+  position: relative;
+}
+
+.cta__image::before {
+  content: "";
+  display: block;
+  padding-top: calc(250 / 375 * 100%);
+  @include mq(md) {
+    padding-top: calc(488 / 1440 * 100%);
+  }
+}
+
+.cta__image img {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.cta__box {
+  width: 100%;
+  max-width: rem(343);
+  position: absolute;
+  bottom: rem(-118);
+  left: 50%;
+  transform: translateX(-50%); // 横方向の中央寄せ
+  @include mq(md) {
+    width: 64.930%;
+    max-width: rem(935);
+    bottom: rem(-136);
+  }
+}
