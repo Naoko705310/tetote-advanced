@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.copyright p {
+  font-family: $second-font-family;
+  font-size: rem(12);
+  color: #999999;
+  font-weight: $regular;
+  line-height: 1;
+}

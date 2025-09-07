@@ -1,0 +1,20 @@
+@use "global" as *;
+
+.footer-logo {
+  width: rem(250);
+  height: rem(61);
+}
+
+.footer-logo a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.footer-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; // 比率を崩さず収めたい場合
+  display: block;      // 余白防止
+}
+
