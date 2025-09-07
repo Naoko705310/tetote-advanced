@@ -1,0 +1,38 @@
+@use "global" as *;
+
+.entry-box {
+  background-color: $white;
+  border-radius: rem(20);
+  text-align: center;
+  padding: rem(24) rem(23) rem(29) rem(25);
+  @include mq(md) {
+    max-width: rem(956);
+    margin: 0 auto;
+    padding: rem(50) 0;
+  }
+}
+
+.entry-box p {
+  font-family: $base-font-family;
+  font-size: rem(14);
+  color: $black;
+  font-weight: $bold;
+  line-height: 2.5;
+  @include mq(md) {
+    font-size: rem(16);
+    line-height: 1.5;
+  }
+}
+
+.entry-box__button {
+  margin-top: rem(23);
+  @include mq(md) {
+    margin-top: rem(31);
+  }
+}
+
+/* ENTRY ボックス専用ボタン */
+.button.entry-box__button {
+  border: none;  // ← ボーダーなし
+}
+
