@@ -1,0 +1,57 @@
+@use "global" as *;
+
+.top-recruiting__items {
+
+}
+
+.recruiting-links {
+
+}
+
+.top-recruiting__item {
+
+}
+
+.recruiting-link {
+  width: 100%;
+  display: inline-block;
+  background-color: $white;
+  width: 100%;
+  font-family: $base-font-family;
+  font-size: rem(20);
+  color: $black;
+  font-weight: $bold;
+  line-height: 1;
+  position: relative;
+  padding: rem(33) 0;
+  text-align: center;
+  @include mq(md) {
+    font-size: rem(18);
+  }
+
+}
+
+.recruiting-link__text {
+
+}
+
+.recruiting-link:after {
+  content: "";
+  display: inline-block;
+  width: rem(20);
+  height: rem(20);
+  background-image: url("../../assets/images/common/arrow-right-black.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  right: rem(20);
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s, background-image 0.3s;
+}
+
+.recruiting-link__icon {
+
+}
+
