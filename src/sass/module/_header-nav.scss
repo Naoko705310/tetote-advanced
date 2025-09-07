@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.header-nav ul {
+  @include mq(md) {
+    display: flex;
+    gap: rem(22);
+  }
+}
