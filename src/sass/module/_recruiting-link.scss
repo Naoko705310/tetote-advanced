@@ -1,17 +1,5 @@
 @use "global" as *;
 
-.top-recruiting__items {
-
-}
-
-.recruiting-links {
-
-}
-
-.top-recruiting__item {
-
-}
-
 .recruiting-link {
   width: 100%;
   display: inline-block;
@@ -28,11 +16,6 @@
   @include mq(md) {
     font-size: rem(18);
   }
-
-}
-
-.recruiting-link__text {
-
 }
 
 .recruiting-link:after {
@@ -51,7 +34,12 @@
   transition: transform 0.3s, background-image 0.3s;
 }
 
-.recruiting-link__icon {
-
+/* hover 時 */
+.recruiting-link:hover {
+  background-color: $black;
+  color: $white;
 }
 
+.recruiting-link:hover:after {
+  background-image: url("../../assets/images/common/arrow-right-white.svg");
+}
