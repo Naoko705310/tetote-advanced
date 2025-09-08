@@ -51,9 +51,6 @@
           <li><a href="#" class="button button--entry button--entry-accent">ENTRY</a></li>
         </ul>
       </nav>
-
-
-  
       <!-- ハンバーガーメニュー -->
       <button id="hamburger-menu" class="header__hamburger hamburger js-hamburger" aria-label="メニューを開く" aria-expanded="false">
         <span></span>
@@ -62,58 +59,56 @@
         <p class="hamburger-text">MENU</p>
       </button>
     </div>
+    <!-- overlayなので、innerの外に出す -->
+    <!-- header-nav -->
+    <div class="header__nav header-nav js-drawer-menu" aria-hidden="true">
+      <div class="header-nav__contents-wrapper">
+        <!-- ロゴ -->
+        <div class="header-nav__logo-wrapper">
+          <div class="header-nav__logo">
+            <a href="index.html">
+              <img src="./assets/images/common/tetote-logo.svg" alt="TETOTEロゴ" width="250" height="61">
+            </a>
+          </div>
+        </div>
+        <!-- navとボタンのブロック -->
+        <div class="header-nav__nav-wrapper">
+          <!-- navigation -->
+          <ul class="header-nav__items">
+            <li class="header-nav__item">
+              <a href="#">ABOUT US<span>TETOTEについて</span></a>
+            </li>
+            <li class="header-nav__item">
+              <a href="#">STAFF<span>社員について</span></a>
+            </li>
+            <li class="header-nav__item">
+              <a href="#">BLOG<span>採用ブログ</span></a>
+            </li>
+            <li class="header-nav__item">
+              <a href="#">BENEFITS<span>福利厚生について</span></a>
+            </li>
+            <li class="header-nav__item">
+              <a href="#">CARRER<span>研修制度とキャリアパス</span></a>
+            </li>
+            <li class="header-nav__item">
+              <a href="#">FAQ<span>よくある質問</span></a>
+            </li>
+          </ul>
+          <!-- ボタン群 -->
+          <ul class="header-nav__buttons">
+            <li class="header-nav__button">
+              <a href="#" class="button button--entry button--entry-black">募集要項</a>
+            </li>
+            <li class="header-nav__button">
+              <a href="#" class="button button--entry button--entry-accent">ENTRY</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </header>
   
   <main>
-<!-- 記述場所はあとで変更！！！！！！！ -->
-<!-- header-nav -->
-<div class="header__nav header-nav js-drawer-menu" aria-hidden="true">
-  <div class="header-nav__contents-wrapper">
-    <!-- ロゴ -->
-    <div class="header-nav__logo">
-      <a href="index.html">
-        <img src="./assets/images/common/tetote-logo.svg" alt="TETOTEロゴ" width="250" height="61">
-      </a>
-    </div>
-    <!-- navとボタンのブロック -->
-    <div class="header-nav__nav-wrapper">
-      <!-- navigation -->
-      <ul class="header-nav__items">
-        <li class="header-nav__item">
-          <a href="#">ABOUT US<span>TETOTEについて</span></a>
-        </li>
-        <li class="header-nav__item">
-          <a href="#">STAFF<span>社員について</span></a>
-        </li>
-        <li class="header-nav__item">
-          <a href="#">BLOG<span>採用ブログ</span></a>
-        </li>
-        <li class="header-nav__item">
-          <a href="#">BENEFITS<span>福利厚生について</span></a>
-        </li>
-        <li class="header-nav__item">
-          <a href="#">CARRER<span>研修制度とキャリアパス</span></a>
-        </li>
-        <li class="header-nav__item">
-          <a href="#">FAQ<span>よくある質問</span></a>
-        </li>
-      </ul>
-      <!-- ボタン群 -->
-      <ul class="header-nav__buttons">
-        <li class="header-nav__button">
-          <a href="#" class="button button--entry button--entry-black">募集要項</a>
-        </li>
-        <li class="header-nav__button">
-          <a href="#" class="button button--entry button--entry-accent">ENTRY</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-
-
-
     <!-- 共通の部品 -->
     <section class="top-fv">
       <div class="top-fv__inner inner">
