@@ -1,0 +1,135 @@
+@use "global" as *;
+
+.header-nav {
+  width: 100%;
+  height: 100vh;
+  background-color: $color-accent-sub;
+  padding: rem(8) rem(12);
+  @include mq(md) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+// ロゴとナビとボタン
+.header-nav__contents-wrapper {
+  @include mq(md) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: rem(63);
+    padding-right: rem(131);
+  }
+}
+
+.header-nav__logo {
+  display: none;
+  @include mq(md) {
+    display: block;
+    width: rem(250);
+    height: rem(61);
+  }
+}
+
+.header-nav__logo a img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+// ナビとボタン
+.header-nav__nav-wrapper {
+  @include mq(md) {
+    border-left: 1px solid $color-accent;
+    padding-left: rem(63);
+  }
+}
+
+.header-nav__items {
+  margin-top: rem(43);
+  @include mq(md) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto); // 3行を作る
+    margin-top: 0;
+    gap: 0 rem(30);
+  }
+}
+
+// itemsのgridの並びを指定（左に1~3, 右に4~6)
+@include mq(md) {
+  // 左列
+  .header-nav__item:nth-child(1) { grid-column: 1; grid-row: 1; }
+  .header-nav__item:nth-child(2) { grid-column: 1; grid-row: 2; }
+  .header-nav__item:nth-child(3) { grid-column: 1; grid-row: 3; }
+
+  // 右列
+  .header-nav__item:nth-child(4) { grid-column: 2; grid-row: 1; }
+  .header-nav__item:nth-child(5) { grid-column: 2; grid-row: 2; }
+  .header-nav__item:nth-child(6) { grid-column: 2; grid-row: 3; }
+}
+
+.header-nav__item {
+  border-bottom: 1px solid $color-accent;
+  padding: rem(13) 0;
+  @include mq(md) {
+    padding: rem(23) 0;
+  }
+}
+
+.header-nav__item:first-child {
+  border-top: 1px solid $color-accent; // 最初の項目に上線を付ける
+}
+
+// PC のときは 4番目にも上線を付ける
+.header-nav__item:nth-child(4) {
+  @include mq(md) {
+    border-top: 1px solid $color-accent;
+  }
+}
+
+// ナビのテキスト英語
+.header-nav__item a {
+  font-family: $second-font-family;
+  font-size: rem(18);
+  color: $black;
+  font-weight: $regular;
+  line-height: 1;
+  @include mq(md) {
+    font-size: rem(32);
+  }
+}
+
+// ナビのテキスト日本語
+.header-nav__item a span {
+  display: block;
+  font-family: $base-font-family;
+  font-size: rem(12);
+  color: $black;
+  font-weight: $bold;
+  line-height: 1;
+  margin-top: rem(9);
+  @include mq(md) {
+    font-size: rem(16);
+  }
+}
+
+.header-nav__buttons {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(13);
+  margin-top: rem(53);
+  @include mq(md) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(30);
+  }
+}
+
+.header-nav__button .button.button--entry.button--entry-black,
+.header-nav__button .button.button--entry.button--entry-accent {
+  width: rem(248);
+  height: rem(42);
+}
+
+
