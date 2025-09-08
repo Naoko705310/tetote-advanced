@@ -47,3 +47,23 @@
     margin-top: rem(10); // 3本目との間隔
   }
 }
+
+
+// ハンバーガーメニューがアクティブなとき（header-navが開いている時）
+.hamburger.is-active span:nth-child(1) {
+  transform: translateY(rem(12)) rotate(45deg); 
+  @include mq(md) {
+    transform: translateY(rem(20)) rotate(45deg);
+  }
+}
+
+.hamburger.is-active span:nth-child(2) {
+  opacity: 0; // 真ん中の線を消す
+}
+
+.hamburger.is-active span:nth-child(3) {
+  transform: translateY(rem(-12)) rotate(-45deg);
+  @include mq(md) {
+    transform: translateY(rem(-20)) rotate(-45deg);
+  }
+}
