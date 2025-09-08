@@ -4,6 +4,7 @@
   width: rem(32);
   display: block;
   position: relative;
+  z-index: 1001; // nav より上に表示
   cursor: pointer;
   @include mq(md) {
     width: rem(52);
@@ -66,4 +67,18 @@
   @include mq(md) {
     transform: translateY(rem(-20)) rotate(-45deg);
   }
+}
+
+// ハンバーガーメニューがアクティブなとき
+.hamburger.is-active span {
+  background-color: $black;
+}
+
+.hamburger.is-active .hamburger-text {
+  color: $black;
+}
+
+// is-active のときは非表示
+.hamburger.is-active .hamburger-text {
+  display: none;
 }

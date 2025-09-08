@@ -1,9 +1,17 @@
 @use "global" as *;
 
 .header-nav {
+  position: fixed;     // 画面全体を覆う
+  top: 0;
+  left: 0;
   width: 100%;
-  min-height: 100vh; // ページの高さが狭いときも背景で覆う
+  height: 100%;
+  // min-height: 100vh; // ページの高さが狭いときも背景で覆う
   background-color: $color-accent-sub;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
   padding: rem(91) rem(12);
   @include mq(md) {
     display: flex;
@@ -11,6 +19,13 @@
     padding: rem(208) 0;
   }
 }
+
+.header-nav.is-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
 
 // ロゴとナビとボタン
 .header-nav__contents-wrapper {
