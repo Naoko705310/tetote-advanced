@@ -1,0 +1,33 @@
+@use "global" as *;
+
+.top-about {
+  margin-top: rem(48);
+  @include mq(md) {
+    margin-top: rem(100);
+  }
+}
+
+.top-about__inner {
+
+}
+
+.top-about__contents-wrapper {
+
+}
+
+.top-about__message {
+
+}
+
+.top-about__lead {
+
+}
+
+.top-about__button {
+
+}
+
+.c-button {
+
+}
+

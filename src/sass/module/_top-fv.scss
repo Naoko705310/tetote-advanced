@@ -23,12 +23,12 @@
   }
 }
 
-.js-top-fv-swiper {
+.swiper.top-fv__swiper {
   width: 100%;
   height: 100%;
 }
 
-.swiper-slide img {
+.top-fv__swiper .swiper-slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
