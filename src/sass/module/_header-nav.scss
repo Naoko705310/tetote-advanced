@@ -12,36 +12,31 @@
   visibility: hidden;
   pointer-events: none;
   transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.header-nav__inner {
   padding: rem(91) rem(12);
   @include mq(md) {
-    display: flex;
-    justify-content: flex-end;
-    padding: rem(208) 0;
+    padding: rem(208) rem(131);
   }
 }
-
-.header-nav.is-active {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-
 
 // ロゴとナビとボタン
 .header-nav__contents-wrapper {
   width: 100%;
-  max-width: rem(1024);
+  max-width: rem(1024);     // ← 最大幅を決める
+  box-sizing: border-box;
   @include mq(md) {
     display: flex;
     align-items: flex-start;
     justify-content: flex-end;
     gap: rem(63);
-    margin-right: rem(131);
     margin-left: auto;
   }
 }
 
 .header-nav__logo-wrapper {
+  max-width: 100%;
   @include mq(md) {
     padding-top: rem(173);
   }
@@ -65,6 +60,7 @@
 
 // ナビとボタン
 .header-nav__nav-wrapper {
+  max-width: 100%;
   @include mq(md) {
     border-left: 1px solid $color-accent;
     padding-left: rem(63);
@@ -157,3 +153,8 @@
 }
 
 
+.header-nav.is-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}

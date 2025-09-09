@@ -1,0 +1,82 @@
+@use "global" as *;
+
+.top-fv {
+
+}
+
+.top-fv__inner {
+
+}
+
+.inner {
+
+}
+
+.swiper {
+
+}
+
+.top-fv__swiper {
+  position: relative;
+  width: 100%;
+  height: 100vh; // FVは画面いっぱいに
+  overflow: hidden;
+  aspect-ratio: 1440 / 823;
+}
+
+
+.js-top-fv-swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-wrapper {
+
+}
+
+.swiper-slide {
+
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.top-fv__slide {
+
+}
+
+.top-fv__content {
+
+}
+
+.top-fv__title {
+
+}
+
+.top-fv__subtitle {
+
+}
+
+.top-fv__news-bar {
+
+}
+
+.news-bar {
+
+}
+
+.news-bar__label {
+
+}
+
+.news-bar__body {
+
+}
+
+.news-bar__link {
+
+}
+

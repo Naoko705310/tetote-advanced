@@ -11,14 +11,22 @@
   }
 }
 
-// 線（3本）
-.hamburger span {
+// 線（3本） → hamburger-text 以外
+.hamburger span:not(.hamburger-text) {
   display: block;
   width: 100%;
   height: 2px;
   background-color: $white;
   transition: all 0.4s ease;
 }
+// // 線（3本）
+// .hamburger span {
+//   display: block;
+//   width: 100%;
+//   height: 2px;
+//   background-color: $white;
+//   transition: all 0.4s ease;
+// }
 
 // 1本目 → 2本目の間隔
 .hamburger span:nth-child(2) {
