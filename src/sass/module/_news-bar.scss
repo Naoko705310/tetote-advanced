@@ -1,13 +1,12 @@
 @use "global" as *;
 
 .news-bar {
-  width: 100%;
-  max-width: rem(351);
+
   display: flex;
   border: 1px solid $black;
   border-radius: rem(50);
   @include mq(md) {
-    max-width: rem(1263);
+    // max-width: rem(1263);
   }
 }
 
