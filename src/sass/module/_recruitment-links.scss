@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.recruiting-links {
+.recruitment-links {
   display: grid;
   grid-template-columns: 1fr;
   gap: rem(19);
@@ -11,7 +11,7 @@
 }
 
 // 3つ目のアイテムだけ横2列分に広げる
-.recruiting-links .top-recruitment__item:nth-child(3) {
+.recruitment-links .top-recruitment__item:nth-child(3) {
   @include mq(md) {
     grid-column: span 2;
   }

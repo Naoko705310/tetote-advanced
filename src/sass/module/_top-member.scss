@@ -45,72 +45,42 @@
 // スライド
 .swiper-slide.top-member__slide {
   width: rem(246);
-  aspect-ratio: 246/311;
-
 }
 
 .swiper-slide.top-member__slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+  // width: 100%;
+  // height: 100%;
+  // object-fit: cover;
+  // display: block;
+}
+
+// swiper-wrapper配下の奇数・偶数スライドをずらす
+.top-member__swiper .swiper-slide:nth-child(odd) {
+  padding-bottom: rem(27);
+}
+
+.top-member__swiper .swiper-slide:nth-child(even) {
+  padding-top: rem(27);
 }
 
 // ページネーション
 .top-member__pagination {
   margin-top: rem(24);
   text-align: center;
-
   @include mq(md) {
     margin-top: rem(40);
   }
-
-  .swiper-pagination-bullet {
-    background-color: $black;
-    opacity: 0.3;
-    &-active {
-      opacity: 1;
-    }
-  }
 }
 
-.top-member__inner {
-
+// 要確認
+.top-member__pagination .swiper-pagination-bullet {
+  background-color: $black;
+  opacity: 0.3;
+}
+.top-member__pagination .swiper-pagination-bullet-active {
+  opacity: 1;
 }
 
-
-
-
-.swiper {
-
+.top-member__button {
+  margin-top: rem(100);
 }
-
-.top-member__swiper {
-
-}
-
-
-.swiper-wrapper {
-
-}
-
-.top-member__swiper-wrapper {
-
-}
-
-.swiper-slide {
-
-}
-
-.top-member__slide {
-
-}
-
-.swiper-pagination {
-
-}
-
-.top-member__pagination {
-
-}
-

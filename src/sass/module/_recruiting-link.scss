@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.recruiting-link {
+.recruitment-link {
   width: 100%;
   display: inline-block;
   background-color: $white;
@@ -18,7 +18,7 @@
   }
 }
 
-.recruiting-link:after {
+.recruitment-link:after {
   content: "";
   display: inline-block;
   width: rem(20);
@@ -35,11 +35,11 @@
 }
 
 /* hover 時 */
-.recruiting-link:hover {
+.recruitment-link:hover {
   background-color: $black;
   color: $white;
 }
 
-.recruiting-link:hover:after {
+.recruitment-link:hover:after {
   background-image: url("../../assets/images/common/arrow-right-white.svg");
 }
