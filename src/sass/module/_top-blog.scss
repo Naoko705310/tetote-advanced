@@ -1,0 +1,65 @@
+@use "global" as *;
+
+
+.top-blog {
+  margin-top: rem(78);
+  padding-top: rem(54);
+  background-color: $color-accent-sub;
+  @include mq(md) {
+    margin-top: rem(107);
+    padding-top: rem(45);
+  }
+}
+
+// タイトルとview moreボタン
+.top-blog__section-title-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// 白丸ボタンとテキスト
+.top-blog__button-wrapper {
+  display: flex;
+  align-items: center;
+  gap: rem(13);
+}
+
+// PCの時はタイトル右横
+.top-blog__button-wrapper--pc {
+  display: none;
+  @include mq(md) {
+    display: flex;
+    margin-right: rem(54);
+  }
+}
+
+// SPの時はブログカード群の下
+.top-blog__button-wrapper--sp {
+  margin-top: rem(52);
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.top-blog__view-more {
+  font-family: $second-font-family;
+  font-size: rem(16);
+  color: $black;
+  font-weight: $normal;
+  line-height: 1;
+}
+
+.top-blog__description {
+  margin-top: rem(19);
+  @include mq(md) {
+    margin-top: rem(31);
+  }
+}
+
+.top-blog__items {
+  margin-top: rem(43);
+  @include mq(md) {
+    margin-top: rem(61);
+  }
+}
