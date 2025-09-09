@@ -11,7 +11,7 @@
 }
 
 // 3つ目のアイテムだけ横2列分に広げる
-.recruiting-links .top-recruiting__item:nth-child(3) {
+.recruiting-links .top-recruitment__item:nth-child(3) {
   @include mq(md) {
     grid-column: span 2;
   }
