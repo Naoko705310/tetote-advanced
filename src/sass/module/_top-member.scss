@@ -13,6 +13,9 @@
 }
 
 .top-member__section-title {
+  @include mq(md) {
+    margin-left: rem(76 - 24);
+  }
 
 }
 
@@ -83,4 +86,5 @@
 
 .top-member__button {
   margin-top: rem(100);
+  text-align: center;
 }

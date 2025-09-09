@@ -15,17 +15,13 @@
 
 }
 
-.top-benefits__section-title {
-
+// PCの時はセンターに（wrapper追加）
+.top-benefits__section-title-wrapper {
+  @include mq(md) {
+    text-align: center;
+  }
 }
 
-.section-title {
-
-}
-
-.section-title--jp {
-
-}
 
 .section-title--jp-first {
 
