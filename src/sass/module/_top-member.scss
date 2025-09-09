@@ -1,0 +1,116 @@
+@use "global" as *;
+
+.top-member {
+  margin-top: rem(71);
+  @include mq(md) {
+    margin-top: rem(121);
+  }
+}
+
+.top-member__inner {
+  position: relative;
+  z-index: 0;
+}
+
+.top-member__section-title {
+
+}
+
+
+.top-member__description {
+  margin-top: rem(19);
+  @include mq(md) {
+    margin-top: rem(10);
+  }
+}
+
+.top-member__description p {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $black;
+  font-weight: $normal;
+  line-height: 1.5;
+}
+
+// Swiper 本体
+.swiper.top-member__swiper {
+  position: relative; // blog は absolute だけど、member は通常フローに載せてOK
+  z-index: 1;
+  margin-top: rem(50);
+  @include mq(md) {
+    margin-top: rem(52);
+  }
+}
+
+// スライド
+.swiper-slide.top-member__slide {
+  width: rem(246);
+  aspect-ratio: 246/311;
+
+}
+
+.swiper-slide.top-member__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+// ページネーション
+.top-member__pagination {
+  margin-top: rem(24);
+  text-align: center;
+
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+
+  .swiper-pagination-bullet {
+    background-color: $black;
+    opacity: 0.3;
+    &-active {
+      opacity: 1;
+    }
+  }
+}
+
+.top-member__inner {
+
+}
+
+
+
+
+.swiper {
+
+}
+
+.top-member__swiper {
+
+}
+
+
+.swiper-wrapper {
+
+}
+
+.top-member__swiper-wrapper {
+
+}
+
+.swiper-slide {
+
+}
+
+.top-member__slide {
+
+}
+
+.swiper-pagination {
+
+}
+
+.top-member__pagination {
+
+}
+

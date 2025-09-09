@@ -1,0 +1,111 @@
+@use "global" as *;
+
+.top-benefits {
+  margin-top: rem(71);
+  @include mq(md) {
+    margin-top: rem(108);
+  }
+}
+
+.top-benefits__inner {
+
+}
+
+.inner {
+
+}
+
+.top-benefits__section-title {
+
+}
+
+.section-title {
+
+}
+
+.section-title--jp {
+
+}
+
+.section-title--jp-first {
+
+}
+
+.top-benefits__description {
+  margin-top: rem(19);
+  @include mq(md) {
+    margin-top: rem(10);
+  }
+
+}
+
+.top-benefits__description p {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $black;
+  font-weight: $regular;
+  line-height: 1.5;
+  @include mq(md) {
+    font-size: rem(18);
+  }
+}
+
+.top-benefits__items {
+  margin-top: rem(51);
+  @include mq(md) {
+    margin-top: rem(114);
+  }
+}
+
+.top-benefits__item {
+
+}
+
+.benefits-card {
+
+}
+
+.benefits-card__heading {
+
+}
+
+.benefits-card__contents-wrapper {
+
+}
+
+.benefits-card__titile {
+
+}
+
+.benefits-card__title--en {
+
+}
+
+.benefits-card__image {
+
+}
+
+.benefits-card__circle-button {
+
+}
+
+.circle-button {
+
+}
+
+.circle-button--black {
+
+}
+
+.benefits-card__title {
+
+}
+
+.benefits-card__title--ja {
+
+}
+
+.benefits-card__body {
+
+}
+
