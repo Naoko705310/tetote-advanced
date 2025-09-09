@@ -7,27 +7,76 @@
   }
 }
 
-.top-about__inner {
-
-}
-
-.top-about__contents-wrapper {
-
+.top-about__message p {
+  font-family: $base-font-family;
+  font-size: rem(18);
+  color: $black;
+  font-weight: $bold;
+  line-height: 2.5;
+  text-align: center;
+  @include mq(md) {
+    font-size: rem(36);
+    line-height: 1.8;
+  }
 }
 
 .top-about__message {
-
+  position: relative;
+  z-index: 1;
 }
 
-.top-about__lead {
+.top-about__message::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../images/top/top-about-map.jpg") no-repeat center / contain;
+  z-index: -1;
+  display: none;
+  @include mq(md) {
+    display: block;
+  }
+}
 
+.top-about__message--first {
+  position: relative; // before配置の基準
+  z-index: 1;         // テキストを上に出すため
+}
+
+.top-about__message--first::before {
+  content: "";
+  position: absolute;
+  inset: 0; // top, right, bottom, left を全部0にする省略記法
+  background: url("../images/top/top-about-map.jpg") no-repeat center / contain;
+  z-index: -1;  // 背景として下に置く
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.top-about__message--second {
+  margin-top: rem(39);
+  @include mq(md) {
+    margin-top: rem(52);
+  }
 }
 
 .top-about__button {
-
+  width: rem(277);
+  margin-top: rem(39);
+  margin-right: auto;
+  margin-left: auto;
+  @include mq(md) {
+    width: rem(355);
+    margin-top: rem(52);
+  }
 }
 
-.c-button {
-
+.top-about__button .button {
+  font-size: rem(16);
+  padding: rem(23) 0;
+  @include mq(md) {
+    font-size: rem(20);
+    padding: rem(30) 0;
+  }
 }
 
