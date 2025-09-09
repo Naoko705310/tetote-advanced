@@ -5,37 +5,27 @@
 }
 
 .top-fv__inner {
-
-}
-
-.inner {
-
-}
-
-.swiper {
-
+  position: relative; // contentの基準になる
 }
 
 .top-fv__swiper {
-  position: relative;
   width: 100%;
   height: 100vh; // FVは画面いっぱいに
   overflow: hidden;
-  aspect-ratio: 1440 / 823;
+  aspect-ratio: 375 / 667;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: -1; // 背景にまわす
+  @include mq(md) {
+    aspect-ratio: 1440 / 823;
+  }
 }
-
 
 .js-top-fv-swiper {
   width: 100%;
   height: 100%;
-}
-
-.swiper-wrapper {
-
-}
-
-.swiper-slide {
-
 }
 
 .swiper-slide img {
@@ -44,39 +34,58 @@
   object-fit: cover;
 }
 
-.top-fv__slide {
-
-}
-
 .top-fv__content {
-
+  width: 100%;
+  padding-top: rem(415);
+  padding-bottom: rem(10);
+  @include mq(md) {
+  padding-top: rem(286);
+  padding-bottom: rem(38);
+  }
 }
 
 .top-fv__title {
-
+  font-family: $second-font-family;
+  font-size: rem(48);
+  color: $white;
+  font-weight: $regular;
+  line-height: 1.2;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+  padding: 0 rem(12);
+  @include mq(md) {
+    font-size: rem(96);
+  }
 }
 
 .top-fv__subtitle {
-
+  display: inline-block;
+  font-family: $base-font-family;
+  font-size: rem(12);
+  color: $white;
+  font-weight: $bold;
+  line-height: 1;
+  background-color: $black;
+  padding: rem(9) rem(24) rem(9) rem(12);
+  display: inline-block; // clip-pathが効くようにする
+  clip-path: polygon(0 0, 100% 0, calc(100% - 20px) 100%, 0 100%);
+  // ↑ 左上→右上→右下を20pxカット→左下
+  margin-top: rem(18);
+  @include mq(md) {
+    font-size: rem(24);
+    padding: rem(17) rem(66);
+    clip-path: polygon(0 0, 100% 0, calc(100% - 40px) 100%, 0 100%);
+    // PCでは切り込みを深く
+    margin-top: rem(86);
+  }
 }
 
 .top-fv__news-bar {
-
-}
-
-.news-bar {
-
-}
-
-.news-bar__label {
-
-}
-
-.news-bar__body {
-
-}
-
-.news-bar__link {
-
+  width: 100%;
+  max-width: rem(1263);
+  margin: 0 auto;
+  margin-top: rem(31);
+  @include mq(md) {
+    margin-top: rem(63);
+  }
 }
 

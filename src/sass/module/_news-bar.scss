@@ -40,6 +40,8 @@
   align-items: center;
   justify-content: space-between;
   padding: rem(10);
+  background-color: $white;
+  border-radius: 0 rem(50) rem(50) 0;
   @include mq(md) {
     padding: rem(23) rem(47) rem(23) rem(90);
   }
