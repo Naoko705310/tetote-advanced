@@ -1,0 +1,82 @@
+@use "global" as *;
+
+.page-about__ceo-message {
+
+}
+
+.ceo-message {
+
+}
+
+.ceo-message__inner {
+
+}
+
+.inner {
+
+}
+
+.ceo-message__title {
+  font-family: $base-font-family;
+  font-size: rem(20);
+  color: $black;
+  font-weight: $bold;
+  line-height: 1;
+  @include mq(md) {
+    font-size: rem(32);
+  }
+}
+
+.ceo-message__contents {
+
+}
+
+
+.ceo-message__image {
+  position: relative;
+}
+
+.ceo-message__image::before {
+  content: "";
+  display: block;
+  padding-top: calc(484 / 629 * 100%);
+}
+
+.ceo-message__image img {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: contain;
+}
+
+.ceo-message__body {
+
+}
+
+.ceo-message__catch {
+  font-family: $base-font-family;
+  font-size: rem(20);
+  color: $black;
+  font-weight: $bold;
+  line-height: 1;
+  @include mq(md) {
+    font-size: rem(32);
+  }
+}
+
+.ceo-message__text {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $black;
+  font-weight: $normal;
+  line-height: 2;
+}
+
+.ceo-message__sign {
+
+}
+

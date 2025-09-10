@@ -59,7 +59,7 @@
   font-family: $base-font-family;
   font-size: rem(12);
   color: $black;
-  font-weight: $regular;
+  font-weight: $normal;
   line-height: 1;
   margin-left: rem(4);
   @include mq(md) {
@@ -96,7 +96,7 @@
   font-family: $base-font-family;
   font-size: rem(12);
   color: $black;
-  font-weight: $regular;
+  font-weight: $normal;
   line-height: 1;
   margin-top: auto;
 }
