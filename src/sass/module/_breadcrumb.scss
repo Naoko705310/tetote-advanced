@@ -1,0 +1,24 @@
+@use "global" as *;
+
+.page-fv__breadcrumb {
+
+}
+
+.breadcrumb {
+  background-color: #f0f0f0;
+  font-family: $base-font-family;
+  font-size: rem(14);
+  color: $black;
+  font-weight: $normal;
+  line-height: 1;
+  padding: rem(20) rem(24);
+}
+
+.page-fv__breadcrumb-separator {
+
+}
+
+.page-fv__breadcrumb-current {
+
+}
+

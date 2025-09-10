@@ -39,8 +39,51 @@
   }
 }
 
+/* 下層ページ専用 */
+.header.page-header {
+  background-color: $color-accent-sub;
+}
+
+.header.page-header .hamburger span:not(.hamburger-text) {
+  background-color: $black;
+}
+
+.header.page-header .hamburger .hamburger-text {
+  color: $black;
+}
 
 
+// ここから下は、JSでクラス名is-default, is-scrolled, is-subpageを切り替える
+/* ===== トップページ初期状態 ===== */
+// .header.is-default {
+//   background-color: transparent;
+//   transition: all 0.3s ease;
+// }
+
+// .header.is-default .header__logo-image--white {
+//   display: block;
+// }
+
+// .header.is-default .header__logo-image--black {
+//   display: none;
+// }
+
+// /* ===== トップページでスクロール後 & 下層ページ ===== */
+// .header.is-scrolled,
+// .header.is-subpage {
+//   background-color: #fff;
+//   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+// }
+
+// .header.is-scrolled .header__logo-image--white,
+// .header.is-subpage .header__logo-image--white {
+//   display: none;
+// }
+
+// .header.is-scrolled .header__logo-image--black,
+// .header.is-subpage .header__logo-image--black {
+//   display: block;
+// }
 
 
 
