@@ -70,25 +70,35 @@
   margin-top: rem(27);
 }
 
-// ページネーション
-.top-member__pagination {
-  margin-top: rem(24);
-  text-align: center;
-  @include mq(md) {
-    margin-top: rem(40);
-  }
-}
-
-// 要確認（JSで実装）
-.top-member__pagination .swiper-pagination-bullet {
-  background-color: $black;
-  opacity: 0.3;
-}
-.top-member__pagination .swiper-pagination-bullet-active {
-  opacity: 1;
+// ナビゲーション
+.top-member__button-wrapper {
+  margin-top: rem(100);
+  position: relative;
+  display: flex;
+  justify-content: center; // VIEW MORE を中央に
+  align-items: center;
 }
 
 .top-member__button {
-  margin-top: rem(100);
-  text-align: center;
+  // 中央のボタン（デフォルトで中央に来る）
+}
+
+.top-member__navigation {
+  display: none;
+  @include mq(md) {
+    position: absolute;
+    right: 0; // 右端に固定
+    display: flex;
+    gap: rem(16); // ボタン同士の間隔
+    margin-right: rem(19);
+  }
+}
+
+.top-member__prev,
+.top-member__next {
+  // circle-button のスタイルは共通クラスに任せる
+}
+
+.top-member__prev {
+  transform: rotate(180deg); /* 左向きに反転 */
 }
