@@ -7,14 +7,6 @@
   }
 }
 
-.top-benefits__inner {
-
-}
-
-.inner {
-
-}
-
 // PCの時はセンターに（wrapper追加）
 .top-benefits__section-title-wrapper {
   @include mq(md) {
@@ -22,17 +14,11 @@
   }
 }
 
-
-.section-title--jp-first {
-
-}
-
 .top-benefits__description {
   margin-top: rem(19);
   @include mq(md) {
     margin-top: rem(10);
   }
-
 }
 
 .top-benefits__description p {
@@ -52,56 +38,3 @@
     margin-top: rem(114);
   }
 }
-
-.top-benefits__item {
-
-}
-
-.benefits-card {
-
-}
-
-.benefits-card__heading {
-
-}
-
-.benefits-card__contents-wrapper {
-
-}
-
-.benefits-card__titile {
-
-}
-
-.benefits-card__title--en {
-
-}
-
-.benefits-card__image {
-
-}
-
-.benefits-card__circle-button {
-
-}
-
-.circle-button {
-
-}
-
-.circle-button--black {
-
-}
-
-.benefits-card__title {
-
-}
-
-.benefits-card__title--ja {
-
-}
-
-.benefits-card__body {
-
-}
-

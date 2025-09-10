@@ -1,12 +1,18 @@
 @use "global" as *;
 
 .top-recruitment {
-  display: none;
-
+  padding-top: rem(66);
+  padding-bottom: rem(88);
+  background-color: $color-accent-sub;
+  @include mq(md) {
+    padding-top: rem(125);
+    padding-bottom: (139);
+  }
 }
 
+// section-titleが見切れるように
 .top-recruitment__inner {
-
+  overflow: hidden;
 }
 
 .inner {
@@ -23,7 +29,18 @@
 }
 
 .top-recruitment__description {
+  margin-top: rem(19);
+  @include mq(md) {
+    margin-top: rem(31);
+  }
+}
 
+.top-recruitment__description p {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $black;
+  font-weight: $regular;
+  line-height: 1.5;
 }
 
 .top-recruitment__items {

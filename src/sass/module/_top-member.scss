@@ -16,9 +16,7 @@
   @include mq(md) {
     margin-left: rem(76 - 24);
   }
-
 }
-
 
 .top-member__description {
   margin-top: rem(19);
@@ -37,6 +35,8 @@
 
 // Swiper 本体
 .swiper.top-member__swiper {
+  width: 100%;
+  height: 100%;
   position: relative; // blog は absolute だけど、member は通常フローに載せてOK
   z-index: 1;
   margin-top: rem(50);
@@ -45,25 +45,29 @@
   }
 }
 
-// スライド
-.swiper-slide.top-member__slide {
-  width: rem(246);
+.swiper-wrapper.swiper.top-member__swiper {
+  width: 100%;
+  height: 100%;
 }
 
-.swiper-slide.top-member__slide img {
-  // width: 100%;
-  // height: 100%;
-  // object-fit: cover;
-  // display: block;
+// スライド
+// 画像とテキストボックスをずらしたデザインなので、
+//スライドのaspect-ratioは指定せず、高さをautoにした
+.swiper-slide.top-member__slide {
+  width: rem(246);
+  height: auto;
+  @include mq(md) {
+    width: rem(300);
+  }
 }
 
 // swiper-wrapper配下の奇数・偶数スライドをずらす
 .top-member__swiper .swiper-slide:nth-child(odd) {
-  padding-bottom: rem(27);
+  margin-bottom: rem(27);
 }
 
 .top-member__swiper .swiper-slide:nth-child(even) {
-  padding-top: rem(27);
+  margin-top: rem(27);
 }
 
 // ページネーション
@@ -75,7 +79,7 @@
   }
 }
 
-// 要確認
+// 要確認（JSで実装）
 .top-member__pagination .swiper-pagination-bullet {
   background-color: $black;
   opacity: 0.3;

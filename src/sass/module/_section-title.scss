@@ -9,7 +9,6 @@
   line-height: 1;
   color: rgba(151, 151, 151, 0.1);
   white-space: nowrap;       // 改行させない
-  overflow: hidden;          // はみ出た部分を非表示
   @include mq(md) {
     font-size: rem(136);
   }

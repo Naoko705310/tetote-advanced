@@ -13,10 +13,12 @@
 }
 
 .swiper.top-message__swiper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
+  width: 100%;
+  height: 100%;
+  padding-bottom: rem(31);
+  @include mq(md) {
+    padding-bottom: 0;
+  }
 }
 
 .swiper-slide.top-message__slide {
@@ -37,25 +39,27 @@
 
 // swiper-wrapper配下の奇数・偶数スライドをずらす
 .top-message__swiper .swiper-slide:nth-child(odd) {
-  padding-top: rem(27);
+  margin-top: rem(27);
 }
 
 .top-message__swiper .swiper-slide:nth-child(even) {
-  padding-bottom: rem(27);
+  margin-bottom: rem(27);
+}
+
+.top-message__text-wrapper {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  z-index: 3;
+  @include mq(md) {
+    bottom: rem(9);
+  }
 }
 
 .top-message__text {
-  width: calc(334/375 * 100%);
+  max-width: rem(542);
   margin: 0 auto;
-  height: 100%;
-  text-align: center;
-  padding-top: rem(162);
-  position: relative;
-  z-index: 3;
-  @include mq(md) {
-    max-width: rem(542);
-    padding-top: rem(269);
-  }
 }
 
 // blog-swiperに重なっているテキスト
