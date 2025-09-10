@@ -101,6 +101,7 @@
   line-height: 1;
   margin-top: rem(10);
   @include mq(md) {
+    line-height: 1.5;
     margin-top: rem(21);
   }
 }
