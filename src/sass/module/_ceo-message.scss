@@ -53,9 +53,9 @@
   font-weight: $bold;
   line-height: 1.5;
   margin-top: rem(26);
-  margin-left: rem(-63);
   @include mq(md) {
     font-size: rem(32);
+    margin-left: rem(-63);
   }
 }
 
