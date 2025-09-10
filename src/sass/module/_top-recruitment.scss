@@ -44,7 +44,10 @@
 }
 
 .top-recruitment__items {
-
+  margin-top: rem(28);
+  @include mq(md) {
+    margin-top: rem(64);
+  }
 }
 
 .recruitment-links {

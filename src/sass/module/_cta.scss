@@ -1,10 +1,18 @@
 @use "global" as *;
 
+.cta {
+  background-color: $color-accent-sub;
+}
+
 .cta__inner {
   position: relative;
   width: 100vw;
   margin-left: calc(50% - 50vw); // 左端まで広げる
   margin-right: calc(50% - 50vw); // 右端まで広げる
+  padding-bottom: rem(118);
+  @include mq(md) {
+    padding-bottom: 0;
+  }
 }
 
 .cta__image {
@@ -34,8 +42,9 @@
 .cta__box {
   width: 100%;
   max-width: rem(343);
+  margin: 0 auto;
   position: absolute;
-  bottom: rem(-118);
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%); // 横方向の中央寄せ
   @include mq(md) {
