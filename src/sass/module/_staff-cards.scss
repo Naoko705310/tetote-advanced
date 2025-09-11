@@ -1,0 +1,12 @@
+@use "global" as *;
+
+// スタッフカード群
+
+.staff-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  @include mq(md) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(48) rem(43);
+  }
+}
