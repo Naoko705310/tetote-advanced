@@ -20,3 +20,10 @@
     margin-top: rem(111);
   }
 }
+
+.page-about__company-profile {
+  margin-top: rem(80);
+  @include mq(md) {
+    margin-top: rem(150);
+  }
+}
