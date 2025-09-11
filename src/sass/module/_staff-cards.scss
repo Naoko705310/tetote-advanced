@@ -5,6 +5,7 @@
 .staff-cards {
   display: grid;
   grid-template-columns: 1fr;
+  gap: rem(48);
   @include mq(md) {
     grid-template-columns: repeat(3, 1fr);
     gap: rem(48) rem(43);
