@@ -1,20 +1,6 @@
 @use "global" as *;
 
-.page-about__our-value {
-
-}
-
-.our-value {
-
-}
-
-.our-value__inner {
-
-}
-
-.inner {
-
-}
+// 私達がたいせつにしていること
 
 .our-value__title {
   font-family: $base-font-family;
@@ -23,7 +9,6 @@
   font-weight: $bold;
   line-height: 1;
   text-align: center;
-  margin-top: rem(66);
   @include mq(md) {
     font-size: rem(32);
   }
@@ -89,10 +74,6 @@
   }
 }
 
-.our-value__body {
-
-}
-
 .our-value__body p {
   font-family: $base-font-family;
   font-size: rem(16);
@@ -104,9 +85,5 @@
     line-height: 1.5;
     margin-top: rem(21);
   }
-}
-
-.our-value__text {
-
 }
 

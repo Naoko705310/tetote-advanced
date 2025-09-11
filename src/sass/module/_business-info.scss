@@ -1,0 +1,31 @@
+@use "global" as *;
+
+// 事業紹介
+
+.business-info__title {
+  font-family: $base-font-family;
+  font-size: rem(20);
+  color: $black;
+  font-weight: $bold;
+  line-height: 1;
+  text-align: center;
+  @include mq(md) {
+    font-size: rem(32);
+  }
+}
+
+.business-info__description {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $black;
+  font-weight: $normal;
+  line-height: 1.5;
+  margin-top: rem(10);
+}
+
+.business-info__items {
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(82);
+  }
+}

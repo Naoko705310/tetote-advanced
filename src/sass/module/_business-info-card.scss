@@ -1,0 +1,74 @@
+@use "global" as *;
+
+.business-info-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(22);
+  @include mq(md) {
+    grid-template-columns: rem(457) 1fr;
+    gap: rem(42);
+    padding: rem(49) rem(22);
+  }
+}
+
+.business-info-card:not(:first-child) {
+  border-top: 1px solid $color-accent;
+}
+
+.business-info-card__image {
+  aspect-ratio: 4/3;
+  border-radius: rem(20);
+  @include mq(md) {
+    aspect-ratio: 457/261;
+  }
+}
+
+.business-info-card__image img {
+  border-radius: rem(20);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.business-info-card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: rem(20);
+  @include mq(md) {
+    gap: rem(40);
+  }
+
+}
+
+.business-info-card__body h3 {
+  font-family: $base-font-family;
+  font-size: rem(18);
+  color: $color-accent;
+  font-weight: $bold;
+  line-height: 1;
+  @include mq(md) {
+    font-size: rem(32);
+  }
+}
+
+.business-info-card__body h4 {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $black;
+  font-weight: $bold;
+  line-height: 1.5;
+  @include mq(md) {
+    font-size: rem(24);
+  }
+}
+
+.business-info-card__body p {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $black;
+  font-weight: $normal;
+  line-height: 1.5;
+}
+

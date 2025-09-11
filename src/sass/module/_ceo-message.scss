@@ -1,10 +1,7 @@
 @use "global" as *;
 
 .ceo-message {
-  margin-top: rem(60);
-  @include mq(md) {
-    margin-top: rem(125);
-  }
+
 }
 
 // 代表メッセージ

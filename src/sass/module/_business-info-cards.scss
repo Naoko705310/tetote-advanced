@@ -1,0 +1,11 @@
+@use "global" as *;
+
+// 事業紹介のカード群
+.business-info-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(40);
+  @include mq(md) {
+    gap: 0;
+  }
+}

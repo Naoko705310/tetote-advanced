@@ -1,0 +1,22 @@
+@use "global" as *;
+
+// ABOUT US
+// TETOTEについて
+
+.page-about__our-value {
+  margin-top: rem(66);
+}
+
+.page-about__ceo-message {
+  margin-top: rem(60);
+  @include mq(md) {
+    margin-top: rem(125);
+  }
+}
+
+.page-about__business-info {
+  margin-top: rem(80);
+  @include mq(md) {
+    margin-top: rem(111);
+  }
+}
