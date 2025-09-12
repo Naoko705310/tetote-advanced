@@ -1,0 +1,13 @@
+@use "global" as *;
+
+// 下層ページ共通のpage-fvのz-index:-1;を打ち消し
+// ＊要素よりfvが前に来ていて要素を選択できなかった
+.page-staff-details__fv {
+  position: relative;
+  z-index: 3;
+  // margin-top: rem(61);
+  // @include mq(md) {
+  //   margin-top: rem(118);
+  // }
+}
+

@@ -1,0 +1,130 @@
+@use "global" as *;
+
+
+
+
+
+.staff-details-fv {
+  background-color: $color-accent-sub;
+  // padding: rem(43) 0;
+
+}
+
+.page-fv__inner {
+  margin-top: rem(43);
+  padding-bottom: rem(43);
+
+}
+
+.inner {
+
+}
+
+.staff-details-fv__inner {
+
+}
+
+.staff-details-fv__contents-wrapper {
+  width: 100%;
+  max-width: rem(600);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: rem(40);
+  @include mq(md) {
+    max-width: 100%;
+    flex-direction: row;
+    gap: rem(85);
+  }
+}
+
+.staff-details-fv__body {
+
+}
+
+// staff-cardと同じタイトル
+.staff-details-fv__title {
+  display: inline-block;
+  font-family: $base-font-family;
+  font-size: rem(20);
+  color: $black;
+  font-weight: $bold;
+  line-height: 1;
+  background-color: $white;
+  padding: rem(3) rem(10);
+  @include mq(md) {
+    font-size: rem(32);
+  }
+}
+
+// staff-cardと同じサブタイトル
+.staff-details-fv__sub-title {
+  display: inline-block;
+  font-family: $base-font-family;
+  font-size: rem(18);
+  color: $black;
+  font-weight: $bold;
+  line-height: 1;
+  background-color: $white;
+  padding: rem(3) rem(10);
+  margin-top: rem(18);
+  @include mq(md) {
+    font-size: rem(24);
+  }
+}
+
+.staff-details-fv__position {
+  font-family: $base-font-family;
+  font-size: rem(14);
+  color: $color-accent;
+  font-weight: $bold;
+  line-height: 1;
+  margin-top: rem(30);
+}
+
+.staff-details-fv__name-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: rem(20);
+  margin-top: rem(12);
+}
+
+.staff-details-fv__name {
+  font-family: $base-font-family;
+  font-size: rem(18);
+  color: $black;
+  font-weight: $bold;
+  line-height: 1;
+  @include mq(md) {
+    font-size: rem(24);
+  }
+}
+
+.staff-details-fv__year {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $black;
+  font-weight: $normal;
+  line-height: 1;
+}
+
+.staff-details-fv__profile {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $black;
+  font-weight: $normal;
+  line-height: 1.8;
+  margin-top: rem(13);
+}
+
+.page-staff-details-fv__image {
+  aspect-ratio: 286/368;
+}
+
+.page-staff-details-fv__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
