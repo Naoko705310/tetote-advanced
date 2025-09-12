@@ -1,36 +1,32 @@
 @use "global" as *;
 
-
-.page-staff-details__main {
-
-}
-
-.staff-interview {
-
-}
-
-.staff-interview__section {
-
-}
-
 .staff-interview__title {
   font-family: $base-font-family;
   font-size: rem(20);
   color: $black;
   font-weight: $bold;
   line-height: 1;
+  position: relative;
   @include mq(md) {
     font-size: rem(24);
   }
 }
 
+// タイトルから左に伸びている黒い線
+.staff-interview__title:before {
+  content: "";
+  position: absolute;
+  left: calc(rem(-216) - rem(16)); // inner をはみ出して左端に線をくっつける
+  top: 50%;
+  transform: translateY(-50%); // タイトル中央に揃える
+  width: rem(216);
+  height: 2px; // 線の太さ（デザインに合わせて調整）
+  background-color: $black;
+}
+
 // ひとつめ以外のタイトルにmargin-top
 .staff-interview__section:not(:first-child) .staff-interview__title {
   margin-top: rem(23);
-}
-
-.staff-interview__content {
-
 }
 
 .staff-interview__text {
@@ -48,36 +44,3 @@
 .staff-interview__items {
   margin-top: rem(23);
 }
-
-.staff-interview__sub-title {
-
-}
-
-.page-staff-details__sidebar {
-
-}
-
-.interview-sidebar {
-
-}
-
-.interview-sidebar__title {
-
-}
-
-.interview-sidebar__nav {
-
-}
-
-.interview-sidebar__list {
-
-}
-
-.interview-sidebar__item {
-
-}
-
-.interview-sidebar__link {
-
-}
-

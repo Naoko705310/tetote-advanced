@@ -5,16 +5,27 @@
 .page-staff-details__fv {
   position: relative;
   z-index: 3;
-  // margin-top: rem(61);
-  // @include mq(md) {
-  //   margin-top: rem(118);
-  // }
 }
 
 // スタッフインタビューの本文と目次横並び
 .page-staff-details__contents-wrapper {
   margin-top: rem(80);
+  padding-bottom: rem(23);
   @include mq(md) {
+    display: grid;
+    grid-template-columns: 69.335% 1fr; //710/1024
+    gap: rem(56);
     margin-top: rem(101);
   }
+}
+
+.page-staff-details__sidebar {
+  display: none;
+  @include mq(md) {
+    display: block;
+  }
+}
+
+.page-staff-details__other-members {
+  margin-top: rem(18 + 66); //カンプが、セクションの間に18pxの余白がある
 }

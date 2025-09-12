@@ -28,3 +28,7 @@ jQuery(function ($) {
     });
   });
 });
+
+
+// staff-detailsページの、記事の該当箇所に来たら目次の色を変える実装は、is-activeで切り替える
+// is-activeのつけ外しでスタイリングした為

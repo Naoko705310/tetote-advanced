@@ -1,0 +1,64 @@
+@use "global" as *;
+
+.interview-sidebar {
+
+}
+
+.interview-sidebar__title {
+  font-family: $base-font-family;
+  font-size: rem(14);
+  color: #666666;
+  font-weight: $bold;
+  line-height: 1.5;
+}
+
+.interview-sidebar__nav {
+
+}
+
+.interview-sidebar__list {
+  @include mq(md) {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: flex-start;
+    gap: rem(16);
+    margin-top: rem(13);
+    position: relative;
+  }
+}
+
+
+
+.interview-sidebar__item {
+
+}
+
+.interview-sidebar__link {
+  font-family: $base-font-family;
+  font-size: rem(14);
+  color: #999999;
+  font-weight: $bold;
+  line-height: 1.5;
+  padding-left: rem(10);
+}
+
+.interview-sidebar__link:before {
+  @include mq(md) {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #999999;
+  }
+}
+
+// アクティブなリンクのスタイル
+// 要確認　JS実装する時に、is-activeで切り替える
+.interview-sidebar__link.is-active {
+  color: $black; // 本文を読んでいるときに黒に
+  font-weight: $bold; // 太字を強調（すでにbold指定があるなら不要）
+
+  &:before {
+    color: $black; // 左の「•」も黒に
+  }
+}

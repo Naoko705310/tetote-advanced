@@ -1,0 +1,82 @@
+@use "global" as *;
+
+
+
+.other-members {
+
+}
+
+.other-members__inner {
+
+}
+
+.inner {
+
+}
+
+.other-members__title {
+  font-family: $base-font-family;
+  font-size: rem(20);
+  color: $black;
+  font-weight: $bold;
+  line-height: 1;
+  text-align: center;
+  @include mq(md) {
+    font-size: rem(32);
+  }
+}
+
+.other-members__items {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(43);
+  margin-top: rem(50);
+  @include mq(md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.otehr-members__item {
+
+}
+
+.staff-card {
+
+}
+
+.staff-card__image {
+
+}
+
+.staff-card__message {
+
+}
+
+.staff-card__message-line1 {
+
+}
+
+.staff-card__message-line2 {
+
+}
+
+.staff-card__body {
+
+}
+
+.staff-card__meta {
+
+}
+
+.staff-card__job {
+
+}
+
+.staff-card__year {
+
+}
+
+.staff-card__name {
+
+}
+
