@@ -1,0 +1,6 @@
+@use "global" as *;
+
+// ブログ詳細ページはFVがないので、パンクズにmargin-topをつける
+.page-blog-details__breadcrumb.breadcrumb {
+  margin-top: rem(61);
+}

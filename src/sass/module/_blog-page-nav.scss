@@ -1,0 +1,79 @@
+@use "global" as *;
+
+/* -------------------------------
+  前後記事ナビゲーション
+------------------------------- */
+.page-blog-details__page-navigation {
+  background-color: #f0f0f0; // 背景色（任意）
+  padding: rem(24) 0;
+}
+
+.blog-page-nav {
+  // セクション全体の余白などがあれば追加
+}
+
+.blog-page-nav__inner {
+
+}
+
+
+
+.blog-page-nav__prev,
+.blog-page-nav__next {
+  flex: 1;
+}
+
+.blog-page-nav__link {
+  display: flex;
+  align-items: center;
+  gap: rem(16);
+  text-decoration: none;
+  color: #333;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.blog-page-nav__icon {
+  display: block;
+  width: rem(24);
+  height: rem(24);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  // 例: 左右で別のアイコンを使う場合
+  &.is-prev {
+    background-image: url("../images/icon-arrow-prev.svg");
+  }
+
+  &.is-next {
+    background-image: url("../images/icon-arrow-next.svg");
+  }
+}
+
+.blog-page-nav__meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-page-nav__title {
+  font-size: rem(14);
+  font-weight: 500;
+  margin-bottom: rem(4);
+  line-height: 1.4;
+}
+
+.blog-page-nav__date {
+  font-size: rem(12);
+  color: #888;
+}
+
+.blog-page-nav__divider {
+  width: 1px;
+  height: rem(48);
+  background-color: #ddd;
+}
+

@@ -1,0 +1,143 @@
+@use "global" as *;
+
+.page-blog-details__blog-article {
+  background-color: $color-accent-sub;
+  padding-top: rem(34);
+  padding-bottom: rem(139);
+}
+
+.blog-article {
+
+}
+
+.blog-article__inner {
+
+}
+
+.inner {
+
+}
+
+.blog-article__contents-wrapper {
+  background-color: $white;
+  padding: rem(40) rem(16);
+  border-radius: rem(10);
+  @include mq(md) {
+    padding: rem(41) rem(40) rem(23) rem(40);
+  }
+
+}
+
+.blog-article__heading {
+
+}
+
+.blog-article__meta {
+
+}
+
+.blog-article__category {
+
+}
+
+.blog-article__date {
+  font-family: $base-font-family;
+  font-size: rem(12);
+  color: $black;
+  font-weight: $normal;
+  line-height: 1;
+  margin-left: rem(19);
+  @include mq(md) {
+    font-size: rem(14);
+  }
+}
+
+.blog-article__title {
+  font-family: $base-font-family;
+  font-size: rem(20);
+  color: $black;
+  font-weight: $bold;
+  line-height: 1;
+  margin-top: rem(16);
+  @include mq(md) {
+    font-size: rem(32);
+    margin-top: rem(25);
+  }
+}
+
+.blog-article__image {
+  width: 100%;
+  aspect-ratio: 4/3;
+  margin-top: rem(20);
+  @include mq(md) {
+    aspect-ratio: 720/411;
+    margin-top: rem(43);
+  }
+}
+
+.blog-article__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog-article__contents {
+  margin-top: rem(20);
+  @include mq(md) {
+    margin-top: rem(43);
+  }
+}
+
+.blog-article__contents h2 {
+  font-family: $base-font-family;
+  font-size: rem(18);
+  color: $black;
+  font-weight: $bold;
+  line-height: 1;
+  margin-top: rem(16);
+  @include mq(md) {
+    font-size: rem(24);
+    margin-top: rem(23);
+  }
+}
+
+.blog-article__contents p {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $black;
+  font-weight: $normal;
+  line-height: 1.8;
+  // margin-top: rem(20);
+  @include mq(md) {
+    // margin-top: rem(50);
+  }
+}
+
+.blog-article__contents p:not(:first-child) {
+  margin-top: rem(20);
+  @include mq(md) {
+    margin-top: rem(50);
+  }
+}
+
+// コンテンツの中のリスト
+// ulで一つのブロックになっているので、line-height: 1.8; で、ulにスタイリングした
+.blog-article__contents ul {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $black;
+  font-weight: $normal;
+  line-height: 1.8;
+  margin-top: rem(20);
+  list-style-type: disc; // 黒丸を追加
+  padding-left: rem(20); // マーカーのための余白
+  @include mq(md) {
+    margin-top: rem(50);
+  }
+}
+
+// コンテンツの中のリストのアイテム（テキスト）
+.blog-article__contents li {
+
+}
+
