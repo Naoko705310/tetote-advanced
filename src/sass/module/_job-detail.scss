@@ -1,0 +1,43 @@
+@use "global" as *;
+
+.staff-interview__items {
+
+}
+
+.job-details {
+
+}
+
+.staff-interview__item {
+
+}
+
+.job-detail {
+
+}
+
+.job-detail__title {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $black;
+  font-weight: $bold;
+  line-height: 1.8;
+}
+
+// 二つ目以外のタイトルにmargin-top
+.job-detail:not(:first-child) .job-detail__title {
+  margin-top: rem(20);//要確認　カンプから数値を読み取れず
+  @include mq(md) {
+    margin-top: rem(40);//要確認　カンプから数値を読み取れず
+  }
+}
+
+.job-detail__text {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $black;
+  font-weight: $normal;
+  line-height: 1.8;
+  margin-top: rem(23); //要確認　カンプから読み取れない
+}
+

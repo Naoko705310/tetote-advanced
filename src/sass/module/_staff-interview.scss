@@ -1,0 +1,83 @@
+@use "global" as *;
+
+
+.page-staff-details__main {
+
+}
+
+.staff-interview {
+
+}
+
+.staff-interview__section {
+
+}
+
+.staff-interview__title {
+  font-family: $base-font-family;
+  font-size: rem(20);
+  color: $black;
+  font-weight: $bold;
+  line-height: 1;
+  @include mq(md) {
+    font-size: rem(24);
+  }
+}
+
+// ひとつめ以外のタイトルにmargin-top
+.staff-interview__section:not(:first-child) .staff-interview__title {
+  margin-top: rem(23);
+}
+
+.staff-interview__content {
+
+}
+
+.staff-interview__text {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $black;
+  font-weight: $normal;
+  line-height: 1.8;
+  margin-top: rem(20);
+  @include mq(md) {
+    margin-top: rem(50);
+  }
+}
+
+.staff-interview__items {
+  margin-top: rem(23);
+}
+
+.staff-interview__sub-title {
+
+}
+
+.page-staff-details__sidebar {
+
+}
+
+.interview-sidebar {
+
+}
+
+.interview-sidebar__title {
+
+}
+
+.interview-sidebar__nav {
+
+}
+
+.interview-sidebar__list {
+
+}
+
+.interview-sidebar__item {
+
+}
+
+.interview-sidebar__link {
+
+}
+
