@@ -1,0 +1,70 @@
+@use "global" as *;
+
+.page-blog__pagination {
+
+}
+
+.blog-pagination {
+
+}
+
+.blog-pagination__list {
+
+}
+
+.blog-pagination__item {
+
+}
+
+.blog-pagination__link {
+
+}
+
+.is-active {
+
+}
+
+
+
+.page-blog__pagination {
+  margin-top: rem(98);
+  display: flex;
+  justify-content: center;
+}
+
+.blog-pagination__list {
+  display: flex;
+  gap: rem(32);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.blog-pagination__item {
+}
+
+.blog-pagination__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: rem(58);
+  height: rem(58);
+  border-radius: 50%;
+  border: 1px solid $black;
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $black;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.blog-pagination__link:hover {
+  background-color: $black;
+  color: $white;
+}
+
+.blog-pagination__link.is-active {
+  background-color: $black;
+  color: $white;
+  border-color: $black;
+}

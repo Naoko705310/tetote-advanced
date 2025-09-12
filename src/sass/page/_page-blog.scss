@@ -1,0 +1,16 @@
+@use "global" as *;
+
+// トップページのmargin-topを上書き
+.top-blog__items.page-blog__items {
+  margin-top: rem(80);
+  @include mq(md) {
+    margin-top: rem(130);
+  }
+}
+
+// ブログ一覧のブログカードは背景色を変える
+.top-blog__item.page-blog__item .blog-card {
+  background-color: $color-accent-sub;
+}
+
+// ページネーション
