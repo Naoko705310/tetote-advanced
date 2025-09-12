@@ -1,18 +1,6 @@
 @use "global" as *;
 
-
-
-.other-members {
-
-}
-
-.other-members__inner {
-
-}
-
-.inner {
-
-}
+// その他のメンバー
 
 .other-members__title {
   font-family: $base-font-family;
@@ -34,49 +22,5 @@
   @include mq(md) {
     grid-template-columns: repeat(3, 1fr);
   }
-}
-
-.otehr-members__item {
-
-}
-
-.staff-card {
-
-}
-
-.staff-card__image {
-
-}
-
-.staff-card__message {
-
-}
-
-.staff-card__message-line1 {
-
-}
-
-.staff-card__message-line2 {
-
-}
-
-.staff-card__body {
-
-}
-
-.staff-card__meta {
-
-}
-
-.staff-card__job {
-
-}
-
-.staff-card__year {
-
-}
-
-.staff-card__name {
-
 }
 
