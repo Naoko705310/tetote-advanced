@@ -1,0 +1,87 @@
+@use "global" as *;
+
+// 制度利用者の声
+
+.users-voice {
+  margin-top: rem(80);
+  @include mq(md) {
+    margin-top: rem(126);
+  }
+}
+
+.users-voice__inner {
+  @include mq(md) {
+    padding: 0 rem(22);
+  }
+}
+
+// 制度利用者の声
+.users-voice__title {
+  font-family: $base-font-family;
+  font-size: rem(20);
+  color: $black;
+  font-weight: $bold;
+  line-height: 1;
+  margin-top: rem(70);
+  @include mq(md) {
+    font-size: rem(32);
+    margin-top: rem(145);
+  }
+}
+
+.users-voice__items {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(46);
+  margin-top: rem(23);
+  @include mq(md) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.users-voice__year {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $color-accent;
+  font-weight: $bold;
+  line-height: 1;
+}
+
+.users-voice__name {
+  display: block;
+  font-family: $base-font-family;
+  font-size: rem(18);
+  color: $black;
+  font-weight: $bold;
+  line-height: 1;
+  margin-top: rem(13);
+  @include mq(md) {
+    font-size: rem(24);
+  }
+}
+
+.users-voice__text {
+  display: block;
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $black;
+  font-weight: $normal;
+  line-height: 1.8;
+  margin-top: rem(25);
+}
+
+.users-voice__image {
+  width: 100%;
+  aspect-ratio: 4/3;
+  margin-top: rem(36);
+  @include mq(md) {
+    aspect-ratio: 980/560;
+  }
+}
+
+.users-voice__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+

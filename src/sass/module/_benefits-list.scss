@@ -1,0 +1,81 @@
+@use "global" as *;
+
+.benefits-list__inner {
+  @include mq(md) {
+    padding: 0 rem(22);
+  }
+}
+
+.benefits-list__title {
+  font-family: $base-font-family;
+  font-size: rem(20);
+  color: $black;
+  font-weight: $bold;
+  line-height: 1;
+  margin-top: rem(70);
+  @include mq(md) {
+    font-size: rem(32);
+    margin-top: rem(145);
+  }
+}
+
+
+.benefits-list__items {
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(113);
+  }
+}
+
+// タイトルと中身を横並び
+.benefits-list__item {
+  display: grid;
+  grid-template-columns: 25% 1fr;
+  align-items: start;
+  justify-content: flex-start;
+  gap: rem(8);
+  border-bottom: 1px dotted $black;
+  padding: rem(36) 0;
+  @include mq(md) {
+    grid-template-columns: 22.753% 1fr;//253-gap20/1024
+    gap: rem(20);
+  }
+}
+
+// 最初のアイテムはpadding-topなし
+.benefits-list__item:first-child {
+  padding-top: 0;
+}
+
+// リストの中のタイトル
+.benefits-list__term {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $black;
+  font-weight: $bold;
+  line-height: 1;
+  @include mq(md) {
+    font-size: rem(18);
+  }
+}
+
+// リストの中の内容
+.benefits-list__desc {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $black;
+  font-weight: $normal;
+  line-height: 1;
+}
+
+// リストの中の箇条書きリスト
+.benefits-list__desc-list {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $black;
+  font-weight: $normal;
+  line-height: 1.5;
+  list-style: disc;
+  padding-left: rem(20);
+}
+
