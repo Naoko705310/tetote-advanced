@@ -4,3 +4,8 @@
 .page-blog-details__breadcrumb.breadcrumb {
   margin-top: rem(61);
 }
+
+// ブログ詳細ページは、CTA上のmarginなし
+.cta.page-blog-details__cta {
+  margin-top: 0;
+}

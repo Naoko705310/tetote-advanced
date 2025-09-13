@@ -172,10 +172,11 @@
     <!-- ブログの前後記事ナビゲーション -->
     <section class="page-blog-details__page-navigation blog-page-nav">
       <div class="blog-page-nav__inner inner">
+        <div class="blog-page-nav__wrapper">
         <!-- 前の記事 -->
         <div class="blog-page-nav__prev">
           <a href="#" class="blog-page-nav__link">
-            <span class="blog-page-nav__icon" aria-hidden="true">←</span>
+            <img src="./assets/images/blog/page-nav-left.png" class="blog-page-nav__icon blog-page-nav__icon--prev" alt="previous矢印" width="24" height="24">
             <div class="blog-page-nav__meta">
               <p class="blog-page-nav__title">内定者向け研修を行いました</p>
               <time class="blog-page-nav__date" datetime="2024-08-25">2024.08.25</time>
@@ -193,17 +194,14 @@
               <p class="blog-page-nav__title">【新卒採用2024】エントリー受付中！</p>
               <time class="blog-page-nav__date" datetime="2024-08-25">2024.08.25</time>
             </div>
-            <span class="blog-page-nav__icon" aria-hidden="true">→</span>
+            <img src="./assets/images/blog/page-nav-right.png" class="blog-page-nav__icon blog-page-nav__icon--prev" alt="previous矢印" width="24" height="24">
           </a>
+        </div>
         </div>
       </div>
     </section>
-
-    
-
-
     <!-- 全ページ共通CTA -->
-    <section class="cta">
+    <section class="cta page-blog-details__cta">
       <div class="cta__inner">
         <picture class="cta__image">
           <source media="(min-width: 768px)" srcset="./assets/images/common/cta-pc.jpg">

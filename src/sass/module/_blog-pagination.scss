@@ -1,31 +1,6 @@
 @use "global" as *;
 
-.page-blog__pagination {
-
-}
-
-.blog-pagination {
-
-}
-
-.blog-pagination__list {
-
-}
-
-.blog-pagination__item {
-
-}
-
-.blog-pagination__link {
-
-}
-
-.is-active {
-
-}
-
-
-
+// ブログ一覧下部のページネーション（白黒丸）
 .page-blog__pagination {
   margin-top: rem(98);
   display: flex;
@@ -38,9 +13,6 @@
   list-style: none;
   padding: 0;
   margin: 0;
-}
-
-.blog-pagination__item {
 }
 
 .blog-pagination__link {

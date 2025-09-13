@@ -1,26 +1,33 @@
 @use "global" as *;
 
-/* -------------------------------
-  前後記事ナビゲーション
-------------------------------- */
+
+  //前後記事ナビゲーション
+
 .page-blog-details__page-navigation {
-  background-color: #f0f0f0; // 背景色（任意）
+  background-color: #f0f0f0;
   padding: rem(24) 0;
 }
 
-.blog-page-nav {
-  // セクション全体の余白などがあれば追加
+// prevとnexを内包するwrapper
+.blog-page-nav__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: rem(20);
+  @include mq(md) {
+    padding: 0 rem(50);
+  }
 }
-
-.blog-page-nav__inner {
-
-}
-
 
 
 .blog-page-nav__prev,
 .blog-page-nav__next {
   flex: 1;
+  max-width: calc(50% - rem(20)); // dividerの幅を考慮
+}
+
+.blog-page-nav__next .blog-page-nav__link {
+  justify-content: flex-end; // リンク内の要素を右寄せ
 }
 
 .blog-page-nav__link {
@@ -30,30 +37,24 @@
   text-decoration: none;
   color: #333;
   transition: opacity 0.3s ease;
+}
 
-  &:hover {
-    opacity: 0.7;
-  }
+// ホバーした時に色を変える
+.blog-page-nav__link:hover {
+  color: $color-accent;
+}
+
+.blog-page-nav__link:hover .blog-page-nav__date {
+  color: $color-accent;
 }
 
 .blog-page-nav__icon {
   display: block;
   width: rem(24);
   height: rem(24);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  // 例: 左右で別のアイコンを使う場合
-  &.is-prev {
-    background-image: url("../images/icon-arrow-prev.svg");
-  }
-
-  &.is-next {
-    background-image: url("../images/icon-arrow-next.svg");
-  }
 }
 
+// タイトルと日付
 .blog-page-nav__meta {
   display: flex;
   flex-direction: column;
@@ -67,13 +68,19 @@
 }
 
 .blog-page-nav__date {
+  font-family: $base-font-family;
   font-size: rem(12);
-  color: #888;
+  color: $black;
+  font-weight: $normal;
+  line-height: 1;
+  margin-top: rem(6);
 }
 
+// 中央を区切る線
 .blog-page-nav__divider {
   width: 1px;
-  height: rem(48);
+  height: rem(56);
   background-color: #ddd;
+  flex-shrink: 0; // 縮まないように固定
 }
 

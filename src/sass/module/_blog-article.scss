@@ -6,18 +6,7 @@
   padding-bottom: rem(139);
 }
 
-.blog-article {
-
-}
-
-.blog-article__inner {
-
-}
-
-.inner {
-
-}
-
+// ブログ記事の白背景部分
 .blog-article__contents-wrapper {
   background-color: $white;
   padding: rem(40) rem(16);
@@ -25,21 +14,9 @@
   @include mq(md) {
     padding: rem(41) rem(40) rem(23) rem(40);
   }
-
 }
 
-.blog-article__heading {
-
-}
-
-.blog-article__meta {
-
-}
-
-.blog-article__category {
-
-}
-
+// 日付
 .blog-article__date {
   font-family: $base-font-family;
   font-size: rem(12);
@@ -52,6 +29,7 @@
   }
 }
 
+// タイトル
 .blog-article__title {
   font-family: $base-font-family;
   font-size: rem(20);
@@ -81,6 +59,7 @@
   object-fit: cover;
 }
 
+// 記事の部分
 .blog-article__contents {
   margin-top: rem(20);
   @include mq(md) {
@@ -88,6 +67,7 @@
   }
 }
 
+// 記事内のタイトル
 .blog-article__contents h2 {
   font-family: $base-font-family;
   font-size: rem(18);
@@ -101,16 +81,13 @@
   }
 }
 
+// 記事本文のテキスト
 .blog-article__contents p {
   font-family: $base-font-family;
   font-size: rem(16);
   color: $black;
   font-weight: $normal;
   line-height: 1.8;
-  // margin-top: rem(20);
-  @include mq(md) {
-    // margin-top: rem(50);
-  }
 }
 
 .blog-article__contents p:not(:first-child) {
@@ -121,7 +98,7 @@
 }
 
 // コンテンツの中のリスト
-// ulで一つのブロックになっているので、line-height: 1.8; で、ulにスタイリングした
+// カンプが、ulで一つのブロックになっているので、line-height: 1.8; で、ulにスタイリングした
 .blog-article__contents ul {
   font-family: $base-font-family;
   font-size: rem(16);
@@ -135,9 +112,3 @@
     margin-top: rem(50);
   }
 }
-
-// コンテンツの中のリストのアイテム（テキスト）
-.blog-article__contents li {
-
-}
-
