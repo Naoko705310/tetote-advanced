@@ -1,0 +1,20 @@
+@use "global" as *;
+
+.page-faq__category-tag {
+  margin-top: rem(80);
+  @include mq(md) {
+    margin-top: rem(145);
+    padding: 0 rem(22);
+  }
+}
+
+.page-faq__section {
+  @include mq(md) {
+    padding: 0 rem(22);
+  }
+}
+
+.page-faq__section:not(:first-child) {
+  margin-top: rem(88);
+}
+

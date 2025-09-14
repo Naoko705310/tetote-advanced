@@ -1,7 +1,7 @@
 @use "global" as *;
 
 // 募集カテゴリータグのul
-.job-categories__list {
+.categorie-tag__list {
   display: grid;
   grid-template-columns: 1fr;
   gap: rem(20);
@@ -11,7 +11,7 @@
   }
 }
 
-.job-categories__item {
+.categorie-tag__item {
   background-color: $color-accent-sub;
   border: 1px solid $black;
   border-radius: rem(40);
@@ -19,7 +19,7 @@
   text-align: center;
 }
 
-.job-categories__link {
+.categorie-tag__link {
   display: block;
   font-family: $base-font-family;
   font-size: rem(16);
@@ -33,7 +33,7 @@
   }
 }
 
-.job-categories__link::after {
+.categorie-tag__link::after {
   content: "↓";
   margin-left: rem(20);
 }
