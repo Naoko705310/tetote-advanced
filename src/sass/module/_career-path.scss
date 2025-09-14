@@ -1,0 +1,101 @@
+@use "global" as *;
+
+// キャリアパスに沿った研修制度を用意
+
+.career-path__inner {
+  padding: 0 rem(22);
+  
+}
+.career-path__title {
+  font-family: $base-font-family;
+  font-size: rem(20);
+  color: $black;
+  font-weight: $bold;
+  line-height: 1;
+  margin-top: rem(70);
+  @include mq(md) {
+    font-size: rem(32);
+    margin-top: rem(145);
+  }
+}
+
+.career-path__text-intro {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $black;
+  font-weight: $normal;
+  line-height: 1;
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(113);
+  }
+}
+
+.career-path__image {
+  aspect-ratio: 4/3;
+  margin-top: rem(20);
+  @include mq(md) {
+    aspect-ratio: 980/734;
+    margin-top: rem(48);
+  }
+}
+
+.career-path__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+// 画像下のテキスト
+.career-path__text-after {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $black;
+  font-weight: $normal;
+  line-height: 1;
+  margin-top: rem(20);
+  @include mq(md) {
+    margin-top: rem(37);
+  }
+}
+
+// 研修のリスト
+.career-path__trainings {
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(89);
+  }
+}
+
+.training-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(37);
+}
+
+.training-list__title {
+  font-family: $base-font-family;
+  font-size: rem(18);
+  color: $black;
+  font-weight: $bold;
+  line-height: 1;
+  padding: rem(12) rem(21);
+  background-color: $color-accent;
+  border-radius: rem(10);
+  @include mq(md) {
+    font-size: rem(24);
+  }
+}
+
+.training-list__text {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $black;
+  font-weight: $normal;
+  line-height: 1.8;
+  margin-top: rem(20);
+  @include mq(md) {
+    margin-top: rem(50);
+  }
+}
+
