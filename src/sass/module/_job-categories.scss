@@ -1,0 +1,44 @@
+@use "global" as *;
+
+// 募集カテゴリータグ
+.job-categories {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(20);
+  @include mq(md) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(49);
+  }
+}
+
+.job-categories__item {
+  background-color: $color-accent-sub;
+  border: 1px solid $black;
+  border-radius: rem(40);
+  padding: rem(18) 0;
+  text-align: center;
+}
+
+.job-categories__link {
+  display: block;
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $black;
+  font-weight: $bold;
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  @include mq(md) {
+    font-size: rem(20);
+  }
+}
+
+.job-categories__link::after {
+  content: "↓";
+  margin-left: rem(20);
+}
+
+.job-categories__arrow {
+
+}
+

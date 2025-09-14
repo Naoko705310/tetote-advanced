@@ -117,16 +117,16 @@
         
         <!-- 背景画像 -->
         <div class="page-fv__bg">
-          <img src="./assets/images/about/about-fv-bg.jpg" alt="TETOTEオフィス内の様子" width="1920" height="1080">
+          <img src="./assets/images/benefits/benefits-fv.jpg" alt="TETOTEオフィス内の様子" width="1920" height="1080">
         </div>
         <!-- FVタイトル -->
         <div class="page-fv__contents-wrapper">
           <div class="page-fv__contents">
             <h1 class="page-fv__title">
-              <span class="page-fv__title-en">STAFF</span>
-              <span class="page-fv__title-jp">社員について</span>
+              <span class="page-fv__title-en">DETAILS</span>
+              <span class="page-fv__title-jp">募集要項</span>
             </h1>
-            <p class="page-fv__description">弊社社員のリアルな声を紹介しています。</p>
+            <p class="page-fv__description">TETOTEは幅広く仲間を募集しています。</p>
           </div>
         </div>
       </div>
@@ -135,120 +135,190 @@
     <nav class="page-fv__breadcrumb breadcrumb">
       <a href="./index.html">TOP</a>
       <span class="page-fv__breadcrumb-separator">&gt;</span>
-      <span class="page-fv__breadcrumb-current">STAFF</span>
+      <span class="page-fv__breadcrumb-current">DETAILS</span>
     </nav>
-    <!-- スタッフ紹介 -->
-    <section class="page-staff__staff-list staff-list">
-      <div class="staff-list__inner inner">
-        <ul class="staff-list__items staff-cards">
-          <li class="staff-list__item staff-card">
-            <div class="staff-card__image">
-              <img src="./assets/images/common/syain01-1.jpg"  alt="コンサルタント 西村優" width="300" height="379">
-              <div class="staff-card__message">
-                <p class="staff-card__message-line1">「あなたが担当で良かった」</p>
-                <p class="staff-card__message-line2">この一言が、最高のやりがい</p>
-              </div>
+    <div class="page-datails">
+      <div class="page-datails__inner inner">
+        <!-- あなたが輝ける場所が、ここにはある -->
+        <section class="page-details__jobs jobs">
+          <div class="jobs__inner">
+            <h2 class="jobs__title">
+              あなたが輝ける場所が、ここにはある
+            </h2>
+            <p class="jobs__text">
+              TETOTEでは、コンサルタントを中心に、様々な職種を募集しています。
+            </p>
+            <!-- 職種カテゴリ -->
+            <ul class="jobs__categories job-categories">
+              <li class="job-categories__item">
+                <a href="#" class="job-categories__link">
+                  コンサルタント
+                </a>
+              </li>
+              <li class="job-categories__item">
+                <a href="#" class="job-categories__link">
+                  ソリューション営業
+                </a>
+              </li>
+              <li class="job-categories__item">
+                <a href="#" class="job-categories__link">
+                  システムエンジニア
+                </a>
+              </li>
+            </ul>
+            <!-- 募集職種 -->
+            <div class="jobs__contents-wrapper">
+              <ul class="jobs__items job-list">
+                <li class="jobs__item job-item" id="job-consultant">
+                  <h3 class="job-item__title">
+                    募集要項-コンサルタント
+                  </h3>
+                  <dl class="job-item__details">
+                    <div class="job-item__row">
+                      <dt class="job-item__term">職種名</dt>
+                      <dd class="job-item__desc">コンサルタント</dd>
+                    </div>
+                    <div class="job-item__row">
+                      <dt class="job-item__term">雇用形態</dt>
+                      <dd class="job-item__desc">正社員</dd>
+                    </div>
+                    <div class="job-item__row">
+                      <dt class="job-item__term">業務内容</dt>
+                      <dd class="job-item__desc">クライアントの課題解決のためのコンサルティング業務</dd>
+                    </div>
+                    <div class="job-item__row">
+                      <dt class="job-item__term">就業時間</dt>
+                      <dd class="job-item__desc">9:00～18:00（フレックスタイム制）</dd>
+                    </div>
+                    <div class="job-item__row">
+                      <dt class="job-item__term">給与</dt>
+                      <dd class="job-item__desc">年収500万円～（経験・能力による）</dd>
+                    </div>
+                    <div class="job-item__row">
+                      <dt class="job-item__term">勤務地</dt>
+                      <dd class="job-item__desc">東京、大阪、名古屋</dd>
+                    </div>
+                    <div class="job-item__row">
+                      <dt class="job-item__term">転勤の有無</dt>
+                      <dd class="job-item__desc">あり</dd>
+                    </div>
+                    <div class="job-item__row">
+                      <dt class="job-item__term">休日休暇</dt>
+                      <dd class="job-item__desc">土日祝日、年末年始、夏季休暇</dd>
+                    </div>
+                    <div class="job-item__row">
+                      <dt class="job-item__term">選考について</dt>
+                      <dd class="job-item__desc">書類選考、面接</dd>
+                    </div>
+                    <div class="job-item__row">
+                      <dt class="job-item__term">採用人数</dt>
+                      <dd class="job-item__desc">若干名</dd>
+                    </div>
+                  </dl>
+                </li>
+                <li class="jobs__item job-item" id="job-sales">
+                  <h3 class="job-item__title">
+                    募集要項-ソリューション営業
+                  </h3>
+                  <dl class="job-item__details">
+                    <div class="job-item__row">
+                      <dt class="job-item__term">職種名</dt>
+                      <dd class="job-item__desc">ソリューション営業</dd>
+                    </div>
+                    <div class="job-item__row">
+                      <dt class="job-item__term">雇用形態</dt>
+                      <dd class="job-item__desc">正社員</dd>
+                    </div>
+                    <div class="job-item__row">
+                      <dt class="job-item__term">業務内容</dt>
+                      <dd class="job-item__desc">顧客の課題解決のためのソリューション提案、販売</dd>
+                    </div>
+                    <div class="job-item__row">
+                      <dt class="job-item__term">就業時間</dt>
+                      <dd class="job-item__desc">9:00～18:00（フレックスタイム制）</dd>
+                    </div>
+                    <div class="job-item__row">
+                      <dt class="job-item__term">給与</dt>
+                      <dd class="job-item__desc">年収500万円～（経験・能力による）</dd>
+                    </div>
+                    <div class="job-item__row">
+                      <dt class="job-item__term">勤務地</dt>
+                      <dd class="job-item__desc">東京、大阪、名古屋</dd>
+                    </div>
+                    <div class="job-item__row">
+                      <dt class="job-item__term">転勤の有無</dt>
+                      <dd class="job-item__desc">あり</dd>
+                    </div>
+                    <div class="job-item__row">
+                      <dt class="job-item__term">休日休暇</dt>
+                      <dd class="job-item__desc">土日祝日、年末年始、夏季休暇</dd>
+                    </div>
+                    <div class="job-item__row">
+                      <dt class="job-item__term">選考について</dt>
+                      <dd class="job-item__desc">書類選考、面接</dd>
+                    </div>
+                    <div class="job-item__row">
+                      <dt class="job-item__term">採用人数</dt>
+                      <dd class="job-item__desc">若干名</dd>
+                    </div>
+                  </dl>
+                </li>
+                
+                <li class="jobs__item job-item" id="job-engineer">
+                  <h3 class="job-item__title">
+                    募集要項-システムエンジニア
+                  </h3>
+                  <dl class="job-item__details">
+                    <div class="job-item__row">
+                      <dt class="job-item__term">職種名</dt>
+                      <dd class="job-item__desc">システムエンジニア</dd>
+                    </div>
+                    <div class="job-item__row">
+                      <dt class="job-item__term">雇用形態</dt>
+                      <dd class="job-item__desc">正社員</dd>
+                    </div>
+                    <div class="job-item__row">
+                      <dt class="job-item__term">業務内容</dt>
+                      <dd class="job-item__desc">システム開発、インフラ構築、データ分析など</dd>
+                    </div>
+                    <div class="job-item__row">
+                      <dt class="job-item__term">就業時間</dt>
+                      <dd class="job-item__desc">9:00～18:00（フレックスタイム制）</dd>
+                    </div>
+                    <div class="job-item__row">
+                      <dt class="job-item__term">給与</dt>
+                      <dd class="job-item__desc">年収500万円～（経験・能力による）</dd>
+                    </div>
+                    <div class="job-item__row">
+                      <dt class="job-item__term">勤務地</dt>
+                      <dd class="job-item__desc">東京、大阪、名古屋</dd>
+                    </div>
+                    <div class="job-item__row">
+                      <dt class="job-item__term">転勤の有無</dt>
+                      <dd class="job-item__desc">あり</dd>
+                    </div>
+                    <div class="job-item__row">
+                      <dt class="job-item__term">休日休暇</dt>
+                      <dd class="job-item__desc">土日祝日、年末年始、夏季休暇</dd>
+                    </div>
+                    <div class="job-item__row">
+                      <dt class="job-item__term">選考について</dt>
+                      <dd class="job-item__desc">書類選考、面接</dd>
+                    </div>
+                    <div class="job-item__row">
+                      <dt class="job-item__term">採用人数</dt>
+                      <dd class="job-item__desc">若干名</dd>
+                    </div>
+                  </dl>
+                </li>
+              </ul>
             </div>
-            <!-- 本文 -->
-            <div class="staff-card__body">
-              <div class="staff-card__meta">
-                <p class="staff-card__job">コンサルタント</p>
-                <p class="staff-card__year">2011年入社</p>
-              </div>
-              <h3 class="staff-card__name">西村 優</h3>
-            </div>
-          </li>
-          <li class="staff-list__item staff-card">
-            <div class="staff-card__image">
-              <img src="./assets/images/common/syain01-1.jpg"  alt="コンサルタント 西村優" width="300" height="379">
-              <div class="staff-card__message">
-                <p class="staff-card__message-line1">「あなたが担当で良かった」</p>
-                <p class="staff-card__message-line2">この一言が、最高のやりがい</p>
-              </div>
-            </div>
-            <!-- 本文 -->
-            <div class="staff-card__body">
-              <div class="staff-card__meta">
-                <p class="staff-card__job">コンサルタント</p>
-                <p class="staff-card__year">2011年入社</p>
-              </div>
-              <h3 class="staff-card__name">西村 優</h3>
-            </div>
-          </li>
-          <li class="staff-list__item staff-card">
-            <div class="staff-card__image">
-              <img src="./assets/images/common/syain01-1.jpg"  alt="コンサルタント 西村優" width="300" height="379">
-              <div class="staff-card__message">
-                <p class="staff-card__message-line1">「あなたが担当で良かった」</p>
-                <p class="staff-card__message-line2">この一言が、最高のやりがい</p>
-              </div>
-            </div>
-            <!-- 本文 -->
-            <div class="staff-card__body">
-              <div class="staff-card__meta">
-                <p class="staff-card__job">コンサルタント</p>
-                <p class="staff-card__year">2011年入社</p>
-              </div>
-              <h3 class="staff-card__name">西村 優</h3>
-            </div>
-          </li>
-          <li class="staff-list__item staff-card">
-            <div class="staff-card__image">
-              <img src="./assets/images/common/syain01-1.jpg"  alt="コンサルタント 西村優" width="300" height="379">
-              <div class="staff-card__message">
-                <p class="staff-card__message-line1">「あなたが担当で良かった」</p>
-                <p class="staff-card__message-line2">この一言が、最高のやりがい</p>
-              </div>
-            </div>
-            <!-- 本文 -->
-            <div class="staff-card__body">
-              <div class="staff-card__meta">
-                <p class="staff-card__job">コンサルタント</p>
-                <p class="staff-card__year">2011年入社</p>
-              </div>
-              <h3 class="staff-card__name">西村 優</h3>
-            </div>
-          </li>
-          <li class="staff-list__item staff-card">
-            <div class="staff-card__image">
-              <img src="./assets/images/common/syain01-1.jpg"  alt="コンサルタント 西村優" width="300" height="379">
-              <div class="staff-card__message">
-                <p class="staff-card__message-line1">「あなたが担当で良かった」</p>
-                <p class="staff-card__message-line2">この一言が、最高のやりがい</p>
-              </div>
-            </div>
-            <!-- 本文 -->
-            <div class="staff-card__body">
-              <div class="staff-card__meta">
-                <p class="staff-card__job">コンサルタント</p>
-                <p class="staff-card__year">2011年入社</p>
-              </div>
-              <h3 class="staff-card__name">西村 優</h3>
-            </div>
-          </li>
-          <li class="staff-list__item staff-card">
-            <div class="staff-card__image">
-              <img src="./assets/images/common/syain01-1.jpg"  alt="コンサルタント 西村優" width="300" height="379">
-              <div class="staff-card__message">
-                <p class="staff-card__message-line1">「あなたが担当で良かった」</p>
-                <p class="staff-card__message-line2">この一言が、最高のやりがい</p>
-              </div>
-            </div>
-            <!-- 本文 -->
-            <div class="staff-card__body">
-              <div class="staff-card__meta">
-                <p class="staff-card__job">コンサルタント</p>
-                <p class="staff-card__year">2011年入社</p>
-              </div>
-              <h3 class="staff-card__name">西村 優</h3>
-            </div>
-          </li>
-        </ul>
+          </div>
+        </section>
       </div>
-    </section>
-
+    </div>
     <!-- 全ページ共通CTA -->
-    <section class="cta">
+    <section class="cta page-benefits__cta">
       <div class="cta__inner">
         <picture class="cta__image">
           <source media="(min-width: 768px)" srcset="./assets/images/common/cta-pc.jpg">

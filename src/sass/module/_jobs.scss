@@ -1,0 +1,52 @@
+@use "global" as *;
+
+
+
+.jobs {
+
+}
+
+.jobs__inner {
+  @include mq(md) {
+    padding: 0 rem(22);
+  }
+}
+
+.inner {
+
+}
+
+.jobs__title {
+  font-family: $base-font-family;
+  font-size: rem(20);
+  color: $black;
+  font-weight: $bold;
+  line-height: 1;
+  @include mq(md) {
+    font-size: rem(32);
+  }
+}
+
+.jobs__text {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $black;
+  font-weight: $normal;
+  line-height: 1;
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(113);
+  }
+}
+
+.jobs__categories {
+  width: 100%;
+  max-width: rem(500);
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: rem(35);
+  @include mq(md) {
+    max-width: 100%;
+    margin-top: rem(70);
+  }
+}
