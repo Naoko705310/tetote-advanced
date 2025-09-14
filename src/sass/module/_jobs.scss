@@ -1,21 +1,13 @@
 @use "global" as *;
 
-
-
-.jobs {
-
-}
-
+// 全体を包むinner
 .jobs__inner {
   @include mq(md) {
     padding: 0 rem(22);
   }
 }
 
-.inner {
-
-}
-
+// あなたが輝ける場所が、ここにはある
 .jobs__title {
   font-family: $base-font-family;
   font-size: rem(20);
@@ -39,6 +31,7 @@
   }
 }
 
+// カテゴリータグを内包するnav
 .jobs__categories {
   width: 100%;
   max-width: rem(500);
@@ -48,5 +41,12 @@
   @include mq(md) {
     max-width: 100%;
     margin-top: rem(70);
+  }
+}
+
+.jobs__contents-wrapper {
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(97);
   }
 }

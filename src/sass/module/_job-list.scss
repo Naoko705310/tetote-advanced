@@ -1,0 +1,7 @@
+@use "global" as *;
+
+.job-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(88);
+}

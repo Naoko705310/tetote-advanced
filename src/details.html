@@ -132,7 +132,7 @@
       </div>
     </section>
     <!-- パンくずリスト -->
-    <nav class="page-fv__breadcrumb breadcrumb">
+    <nav class="page-fv__breadcrumb breadcrumb" aria-label="パンくずリスト">
       <a href="./index.html">TOP</a>
       <span class="page-fv__breadcrumb-separator">&gt;</span>
       <span class="page-fv__breadcrumb-current">DETAILS</span>
@@ -149,29 +149,31 @@
               TETOTEでは、コンサルタントを中心に、様々な職種を募集しています。
             </p>
             <!-- 職種カテゴリ -->
-            <ul class="jobs__categories job-categories">
-              <li class="job-categories__item">
-                <a href="#" class="job-categories__link">
-                  コンサルタント
-                </a>
-              </li>
-              <li class="job-categories__item">
-                <a href="#" class="job-categories__link">
-                  ソリューション営業
-                </a>
-              </li>
-              <li class="job-categories__item">
-                <a href="#" class="job-categories__link">
-                  システムエンジニア
-                </a>
-              </li>
-            </ul>
+            <nav class="jobs__categories job-categories" aria-label="職種カテゴリ">
+              <ul class="job-categories__list">
+                <li class="job-categories__item">
+                  <a href="#job-consultant" class="job-categories__link">
+                    コンサルタント
+                  </a>
+                </li>
+                <li class="job-categories__item">
+                  <a href="#job-sales" class="job-categories__link">
+                    ソリューション営業
+                  </a>
+                </li>
+                <li class="job-categories__item">
+                  <a href="#job-engineer" class="job-categories__link">
+                    システムエンジニア
+                  </a>
+                </li>
+              </ul>
+            </nav>
             <!-- 募集職種 -->
             <div class="jobs__contents-wrapper">
               <ul class="jobs__items job-list">
                 <li class="jobs__item job-item" id="job-consultant">
                   <h3 class="job-item__title">
-                    募集要項-コンサルタント
+                    コンサルタント
                   </h3>
                   <dl class="job-item__details">
                     <div class="job-item__row">

@@ -1,7 +1,7 @@
 @use "global" as *;
 
-// 募集カテゴリータグ
-.job-categories {
+// 募集カテゴリータグのul
+.job-categories__list {
   display: grid;
   grid-template-columns: 1fr;
   gap: rem(20);
@@ -36,9 +36,5 @@
 .job-categories__link::after {
   content: "↓";
   margin-left: rem(20);
-}
-
-.job-categories__arrow {
-
 }
 
