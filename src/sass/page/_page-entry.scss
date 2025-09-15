@@ -1,11 +1,14 @@
 @use "global" as *;
 
 .page-entry {
-
+  background-color: $color-accent-sub;
+  padding-top: rem(33);
+  padding-bottom: rem(57);
 }
 
-.page-entry__inner {
-
+.page-entry__inner.inner {
+  max-width: rem(880);
+  margin: 0 auto;
 }
 
 .inner {
@@ -13,7 +16,11 @@
 }
 
 .page-entry__contents-wrapper {
-
+  background-color: $white;
+padding: rem(20) rem(15);
+  @include mq(md) {
+    padding: rem(58) rem(71) rem(81) rem(71);
+  }
 }
 
 .page-entry__header {
@@ -21,82 +28,58 @@
 }
 
 .page-entry__en {
-
+  font-family: $base-font-family;
+  font-size: rem(18);
+  color: $black;
+  font-weight: $normal;
+  line-height: 1;
+  text-align: center;
+  @include mq(md) {
+    font-size: rem(24);
+  }
 }
 
+// 新卒・中途採用エントリーフォーム
 .page-entry__title {
+  font-family: $base-font-family;
+  font-size: rem(20);
+  color: $black;
+  font-weight: $bold;
+  line-height: 1.2;
+  text-align: center;
+  margin-top: rem(29);
+  @include mq(md) {
+    font-size: rem(32);
+    line-height: 1;
+  }
+}
 
+// 新卒・中途採用
+.page-entry__title--color {
+  color: $color-accent;
 }
 
 .page-entry__note {
-
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $black;
+  font-weight: $normal;
+  line-height: 1.5;
+  margin-top: rem(20);
+  @include mq(md) {
+    margin-top: rem(51);
+  }
 }
+
 
 .page-entry__required-note {
 
 }
 
-.entry-form {
-
+.page-entry__entry-form {
+  margin-top: rem(40);
+  border-top: 1px solid $color-accent;
+  @include mq(md) {
+    margin-top: rem(95);
+  }
 }
-
-.entry-form__fieldset {
-
-}
-
-.visually-hidden {
-
-}
-
-.entry-form__field {
-
-}
-
-.entry-form__label {
-
-}
-
-.entry-form__input {
-
-}
-
-.entry-form__field--birth {
-
-}
-
-.entry-form__birth-wrapper {
-
-}
-
-.entry-form__input--year {
-
-}
-
-.entry-form__select {
-
-}
-
-.entry-form__radio-group {
-
-}
-
-.entry-form__textarea {
-
-}
-
-.entry-form__checkbox-group {
-
-}
-
-.entry-form__field--consent {
-
-}
-
-.entry-form__actions {
-
-}
-
-.entry-form__submit {
-
-}
-

@@ -133,14 +133,14 @@
         <div class="page-entry__contents-wrapper">
           <header class="page-entry__header">
             <h2 class="page-entry__en">ENTRY FORM</h2>
-            <h3 class="page-entry__title">新卒・中途採用エントリーフォーム</h3>
+            <h3 class="page-entry__title"><span class="page-entry__title--color">新卒・中途採用</span><br class="u-mobile">エントリーフォーム</h3>
             <p class="page-entry__note">
               当社へ入社をご希望の方は、下記の送信フォームより送信してください。<br>
               <span class="page-entry__required-note">※は必須項目になります。</span>
             </p>
           </header>
     
-          <form class="entry-form" action="#" method="post" novalidate>
+          <form class="page-entry__entry-form entry-form" action="#" method="post" novalidate>
             <fieldset class="entry-form__fieldset">
               <legend class="visually-hidden">応募者情報</legend>
     
@@ -172,34 +172,42 @@
               <div class="entry-form__field entry-form__field--birth">
                 <label for="birth-year" class="entry-form__label">生年月日 <span aria-hidden="true">※</span></label>
                 <div class="entry-form__birth-wrapper">
-                  <input type="number" id="birth-year" name="birth-year" class="entry-form__input entry-form__input--year" placeholder="例：2000" required aria-required="true"> 年
-                  <select id="birth-month" name="birth-month" class="entry-form__select" required aria-required="true">
-                    <option value="">選択してください</option>
-                    <option value="1">1月</option>
-                    <option value="2">2月</option>
-                    <option value="3">3月</option>
-                    <!-- 省略 -->
-                  </select>
-                  月
-                  <select id="birth-day" name="birth-day" class="entry-form__select" required aria-required="true">
-                    <option value="">選択してください</option>
-                    <option value="1">1日</option>
-                    <option value="2">2日</option>
-                    <!-- 省略 -->
-                  </select>
-                  日
-                </div>
+                  <div class="entry-form__birth-item">
+                    <input type="number" id="birth-year" name="birth-year" class="entry-form__input entry-form__input--year" placeholder="例：2000" required aria-required="true">
+                    <span class="entry-form__birth-unit">年</span>
+                  </div>
+                
+                  <div class="entry-form__birth-item">
+                    <select id="birth-month" name="birth-month" 
+                            class="entry-form__select" required aria-required="true">
+                      <option value="">選択してください</option>
+                      <option value="1">1月</option>
+                      <option value="2">2月</option>
+                    </select>
+                    <span class="entry-form__birth-unit">月</span>
+                  </div>
+                
+                  <div class="entry-form__birth-item">
+                    <select id="birth-day" name="birth-day" 
+                            class="entry-form__select" required aria-required="true">
+                      <option value="">選択してください</option>
+                      <option value="1">1日</option>
+                      <option value="2">2日</option>
+                    </select>
+                    <span class="entry-form__birth-unit">日</span>
+                  </div>
+                </div>                
               </div>
     
               <!-- 希望職種 -->
-              <fieldset class="entry-form__field">
+              <div class="entry-form__field">
                 <legend class="entry-form__label">希望職種 <span aria-hidden="true">※</span></legend>
                 <div class="entry-form__radio-group">
                   <label><input type="radio" name="job" value="consultant" required aria-required="true"> コンサルタント</label>
                   <label><input type="radio" name="job" value="sales"> ソリューション営業</label>
                   <label><input type="radio" name="job" value="engineer"> システムエンジニア</label>
                 </div>
-              </fieldset>
+              </div>
     
               <!-- 自己PR -->
               <div class="entry-form__field">
@@ -208,7 +216,7 @@
               </div>
     
               <!-- 当社を知ったきっかけ -->
-              <fieldset class="entry-form__field">
+              <div class="entry-form__field">
                 <legend class="entry-form__label">当社を知ったきっかけを教えて下さい。</legend>
                 <div class="entry-form__checkbox-group">
                   <label><input type="checkbox" name="source" value="twitter"> X旧(Twitter)</label>
@@ -218,7 +226,7 @@
                   <label><input type="checkbox" name="source" value="friend"> 知人友人・親戚</label>
                   <label><input type="checkbox" name="source" value="other"> その他</label>
                 </div>
-              </fieldset>
+              </div>
     
               <!-- 個人情報保護 -->
               <div class="entry-form__field entry-form__field--consent">

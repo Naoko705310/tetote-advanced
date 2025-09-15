@@ -1,0 +1,419 @@
+@use "global" as *;
+
+// 注：フォーム全体を囲むブロックは、まとまりを表すためにfieldsetを使用。
+// デフォルトのスタイルを打ち消すためreset cssを記述。
+// 本来はチェックボックスとラジオボタンもfieldsetタグが推奨されるが、スタイルがうまく当たらないため、他のグループと同じ様に、divを使用した。
+
+// 横線より下の部分（labelとinputエリア）
+.entry-form__fieldset {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(27);
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(97);
+  }
+}
+
+// 「応募者情報」というlegend
+// アクセシビリティー的に推奨だが、デザイン上は不要なので、下記の方法で非表示にする
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+// PCは、labelとinputエリアを横並び
+.entry-form__field {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(10);
+  @include mq(md) {
+    grid-template-columns: 22.086% 1fr;
+  }
+}
+
+// ラベル
+.entry-form__label {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $black;
+  font-weight: $normal;
+  line-height: 1;
+}
+
+// ※印
+.entry-form__label span {
+  color: $color-accent;
+}
+
+// 入力エリアのスタイル
+.entry-form__input {
+  width: 100%;
+  height: rem(56);//placeholderのfont+paddingの高さに揃わないので、高さ指定
+  background-color: $color-accent-sub;
+  border: 1px solid $color-accent;
+  border-radius: rem(10);
+  padding: rem(20);
+}
+
+// 選択エリアのスタイル、「選択してください」
+.entry-form__select {
+  width: 100%;
+  background-color: $color-accent-sub;
+  border: 1px solid $color-accent;
+  border-radius: rem(10);
+  padding: rem(22);
+
+  font-family: $base-font-family;
+  font-size: rem(12);
+  color: $black;
+  font-weight: $normal;
+  line-height: 1;
+}
+
+// 入力エリアのplaceholder
+.entry-form__input::placeholder {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: #757575;
+  font-weight: $normal;
+  line-height: 1;
+}
+
+/* --------------------------------------------
+/* 生年月日
+/* -------------------------------------------- */
+
+// 生年月日のinputエリア群
+.entry-form__birth-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(15);
+  @include mq(md) {
+    // width: 58%;//幅58%にしたら、中のinputエリアが167pxになる
+    grid-template-columns: 1fr 1fr; // 2列
+    grid-template-rows: auto auto; // 2行
+  }
+}
+
+// 入力エリアとテキスト
+.entry-form__birth-item {
+  display: flex;
+  align-items: center;
+  gap: rem(10);
+  position: relative; // 擬似要素の基準点にする
+}
+
+// select要素がある場合のみ矢印を表示
+.entry-form__birth-item:has(.entry-form__select)::after {
+  content: "";
+  position: absolute;
+  left: rem(142);//168-padding15-arrow11
+  top: 50%;
+  transform: translateY(-50%);
+  width: rem(12);
+  height: rem(8);
+  background-image: url("../images/entry/arrow-select.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+  z-index: 1;
+}
+
+// select要素の右側にパディングを追加して矢印のスペースを確保
+.entry-form__birth-item .entry-form__select {
+  width: rem(168);
+  flex-shrink: 0;
+  padding-right: rem(30); // 矢印のスペースを確保
+}
+
+.entry-form__birth-item .entry-form__input,
+.entry-form__birth-item .entry-form__select {
+  width: rem(168);
+  flex-shrink: 0; // 縮小を防ぐ
+}
+
+.entry-form__birth-item .entry-form__birth-unit {
+  white-space: nowrap;
+  flex-shrink: 0; // 縮小を防ぐ
+}
+
+// 年ブロックの位置
+.entry-form__birth-item:first-child {
+  // 1つ目のアイテム（年）を1行目の1列目に配置
+  @include mq(md) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+}
+
+// 月ブロックの位置
+.entry-form__birth-item:nth-child(2) {
+  // 2つ目のアイテム（月）を2行目の1列目に配置
+  @include mq(md) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+}
+// 日ブロックの位置
+.entry-form__birth-item:nth-child(3) {
+  // 3つ目のアイテム（日）を2行目の2列目に配置
+  @include mq(md) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+
+
+
+// 年月日の文字
+.entry-form__birth-unit {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $black;
+  font-weight: $normal;
+  line-height: 1;
+  white-space: nowrap; // 単位テキストの折り返しを防止
+}
+
+/* --------------------------------------------
+/* 希望職種（ラジオボタン）
+/* -------------------------------------------- */
+
+// ラジオボタンをカスタム
+// 希望職種
+.entry-form__radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: rem(16);
+}
+
+// ボタンの丸とラベルのグループ
+.entry-form__radio-group label {
+  display: flex;
+  align-items: center;
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $black;
+  font-weight: $normal;
+  line-height: 1;
+  cursor: pointer;
+  gap: rem(12);
+}
+
+// リセットCSSの設定を上書きしてラジオボタンを表示
+.entry-form__radio-group input[type="radio"] {
+  position: static; // absolute を上書き
+  opacity: 1; // 0 を上書き
+  width: rem(20);
+  height: rem(20);
+  margin: 0; // -1px を上書き
+  padding: 0;
+  overflow: visible; // hidden を上書き
+  clip: auto; // rect(0 0 0 0) を上書き
+  white-space: normal; // nowrap を上書き
+  background-color: $color-accent-sub;
+  border: 1px solid $color-accent;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+}
+
+// 選択時の●
+.entry-form__radio-group input[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: rem(10); // 10px
+  height: rem(10); // 10px
+  background-color: $black; // カラーを$blackに変更
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; // z-indexを追加
+}
+
+// フォーカス時
+.entry-form__radio-group input[type="radio"]:focus {
+  box-shadow: 0 0 0 2px rgba($color-accent, 0.4);
+}
+
+
+/* --------------------------------------------
+/* 自己PR（テキストエリア）
+/* -------------------------------------------- */
+// テキストエリア
+// 自己PR
+.entry-form__textarea {
+  width: 100%;
+  min-height: rem(120); // 最小高さを設定
+  background-color: $color-accent-sub;
+  border: 1px solid $color-accent;
+  border-radius: rem(10);
+  padding: rem(20);
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $black;
+  font-weight: $normal;
+  line-height: 1.5; // テキストエリアは行間を広めに
+  resize: vertical; // 縦方向のみリサイズ可能
+}
+
+// textareaのplaceholder
+.entry-form__textarea::placeholder {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: #757575;
+  font-weight: $normal;
+  line-height: 1.5;
+}
+
+/* --------------------------------------------
+/* 当社を知ったきっかけ（チェックボックス）
+/* -------------------------------------------- */
+// チェックボックス
+// 当社を知ったきっかけ
+.entry-form__checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: rem(16); // 各チェックボックス間の余白
+}
+
+.entry-form__checkbox-group label {
+  display: flex;
+  align-items: center;
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $black;
+  font-weight: $normal;
+  line-height: 1;
+  cursor: pointer;
+  gap: rem(12); // ボタンと文字の間
+}
+
+// リセットCSSの設定を上書きしてチェックボックスを表示
+.entry-form__checkbox-group input[type="checkbox"] {
+  position: relative; // 擬似要素の基準点にする
+  opacity: 1;
+  width: rem(24); // 24px
+  height: rem(24); // 24px
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  border: 1px solid $color-accent;
+  background-color: $color-accent-sub;
+  cursor: pointer;
+}
+
+// 選択時の✓
+.entry-form__checkbox-group input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: rem(10); // 10px
+  height: rem(10); // 10px
+  background-color: $black;
+  border-radius: rem(2); // 角丸を少しつける
+  transform: translate(-50%, -50%);
+}
+
+// フォーカス時（キーボード操作のアクセシビリティ用）
+.entry-form__checkbox-group input[type="checkbox"]:focus {
+  box-shadow: 0 0 0 2px rgba($color-accent, 0.4);
+}
+
+/* --------------------------------------------
+/* // 個人情報保護方針（チェックボックス）
+/* -------------------------------------------- */
+.entry-form__field--consent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(10);
+  
+  label {
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+    font-family: $base-font-family;
+    font-size: rem(14);
+    color: $black;
+    font-weight: $normal;
+    line-height: 1;
+    cursor: pointer;
+  }
+  
+  input[type="checkbox"] {
+    // リセットCSSを上書き
+    position: relative;
+    opacity: 1;
+    width: rem(16);
+    height: rem(16);
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+    border: 1px solid $color-accent;
+    background-color: $color-accent-sub;
+    cursor: pointer;
+    
+    // チェック状態のスタイル
+    &:checked::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: rem(10);
+      height: rem(10);
+      background-color: $black;
+    }
+  }
+}
+
+/* --------------------------------------------
+/* 送信ボタン
+/* -------------------------------------------- */
+
+// 送信ボタン
+.entry-form__actions {
+  display: flex;
+  justify-content: center;
+  margin-top: rem(62);
+}
+
+.entry-form__submit {
+  width: rem(256);
+  // height: rem(56);
+  padding: rem(20) 0;
+  background-color: $white;
+  border: 1px solid $black;
+  font-size: rem(16);
+  font-weight: $normal;
+  color: $black;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background-color: $black;
+    color: $white;
+  }
+  
+  &:focus {
+    outline: 2px solid $color-accent;
+    outline-offset: 2px;
+  }
+}
