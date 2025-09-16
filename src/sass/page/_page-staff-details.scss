@@ -7,6 +7,13 @@
   z-index: 3;
 }
 
+// staff-detailsのページはFV背景画像なし
+.page-fv.page-staff-details__fv {
+  background-image: none;
+  padding: rem(43) 0;
+
+}
+
 // スタッフインタビューの本文と目次横並び
 .page-staff-details__contents-wrapper {
   margin-top: rem(80);
