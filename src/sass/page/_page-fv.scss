@@ -1,81 +1,41 @@
 @use "global" as *;
 
 // headerの分下に下げる
+// 背景はCSSで指定（WordPress化時にアイキャッチに差し替え予定） 
 .page-fv {
-  padding-top: rem(61);
+  margin-top: rem(61);
+  background-color: lightgray;
+  background-image: url('../images/about/about-fv-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1440 / 339; // ← 比率で指定
   @include mq(md) {
-    padding-top: rem(118);
+    margin-top: rem(118);
   }
 }
 
-.page-fv__inner {
-  position: relative;
-  z-index: -1;
-}
-
-// 背景画像を画面いっぱいに広げる
-.page-fv__bg {
-  position: relative;
-  width: 100vw;       // ビューポートいっぱい
-  margin-left: calc(50% - 50vw); // inner の左右paddingを打ち消す
-  overflow: hidden;
-  height: auto; // 高さをしっかり持たせる
-}
-
-.page-fv__bg::before {
-  content: "";
-  display: block;
-  padding-top: calc(250 / 375 * 100%);
-  @include mq(md) {
-    padding-top: calc(339 / 1440 * 100%);
-  }
-}
-
-.page-fv__bg img {
-  width: 100%;
-  max-width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
-}
-
-// タイトルは、absoluteで上からの位置を固定
-.page-fv__contents-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: space-between; // 上下に余白感を作れる
-  // padding-bottom: rem(98);
-  // padding-top: calc(100 / 375 * 100%);
-  // bottom: rem(98);
-  // left: rem(16); // innerのpadding分を調整
-  // z-index: 1;
-  @include mq(md) {
-    // top: calc(75 / 339 * 100%);
-    // left: rem(24);
-  }
-}
-
-// FVタイトル
 .page-fv__contents {
-  display: flex;
-  flex-direction: column; /* 縦に並べる */
-  gap: rem(18);           /* 各要素の余白を18pxに */
-  align-items: flex-start; /* 左寄せ */
+  padding-top: rem(75);
+  padding-bottom: rem(98);
+  @include mq(md) {
+    padding-top: rem(75);
+    padding-bottom: rem(98);
+  }
 }
 
-// FVタイトルの英日
-.page-fv__title {
+// タイトル＋サブタイトル＋desc共通スタイル
+.page-fv__text {
+  display: inline-block; // ← 背景がテキスト幅にフィット
+  background-color: $white; 
+}
+
+// タイトル＋サブタイトル＋descを縦並び
+.page-fv__texts {
   display: flex;
-  flex-direction: column; /* 縦に並べる */
-  gap: rem(18);           /* 各要素の余白を18pxに */
-  align-items: flex-start; /* 左寄せ */
+  flex-direction: column;
+  gap: rem(18);
+  align-items: flex-start; // ← 子要素の幅を中身に合わせる
 }
 
 .page-fv__title-en {
@@ -84,7 +44,6 @@
   color: $black;
   font-weight: $normal;
   line-height: 1;
-  background-color: $white;
   padding: rem(3) rem(10);
   @include mq(md) {
     font-size: rem(64);
@@ -92,28 +51,23 @@
 }
 
 .page-fv__title-jp {
-  display: inline-block;
   font-family: $base-font-family;
   font-size: rem(18);
   color: $black;
   font-weight: $bold;
   line-height: 1;
-  background-color: $white;
   padding: rem(3) rem(10);
   @include mq(md) {
     font-size: rem(24);
   }
 }
 
-// FVタイトルのサブライン
 .page-fv__description {
-  display: inline-block;
   font-family: $base-font-family;
   font-size: rem(16);
   color: $color-accent;
   font-weight: $bold;
   line-height: 1;
-  background-color: $white;
   padding: rem(7) rem(10);
 }
 
