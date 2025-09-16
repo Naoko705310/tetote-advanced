@@ -11,8 +11,11 @@
   margin: 0 auto;
 }
 
-.inner {
-
+.page-entry__breadcrumb {
+  margin-top: rem(61);
+  @include mq(md) {
+    margin-top: rem(121);
+  }
 }
 
 .page-entry__contents-wrapper {
@@ -21,10 +24,6 @@ padding: rem(20) rem(15);
   @include mq(md) {
     padding: rem(58) rem(71) rem(81) rem(71);
   }
-}
-
-.page-entry__header {
-
 }
 
 .page-entry__en {
@@ -69,11 +68,6 @@ padding: rem(20) rem(15);
   @include mq(md) {
     margin-top: rem(51);
   }
-}
-
-
-.page-entry__required-note {
-
 }
 
 .page-entry__entry-form {
