@@ -69,7 +69,12 @@
     line-height: 1;
     position: relative;
     padding-right: rem(16);
+    transition: color 0.3s ease;
   }
+}
+
+.news-bar__link:hover {
+  color: $color-accent;
 }
 
 // 右矢印(黒)

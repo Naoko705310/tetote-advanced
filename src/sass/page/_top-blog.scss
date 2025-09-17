@@ -48,6 +48,11 @@
   color: $black;
   font-weight: $normal;
   line-height: 1;
+  transition: color 0.3s ease;
+}
+
+.top-blog__view-more:hover {
+  color: $color-accent;
 }
 
 .top-blog__description {

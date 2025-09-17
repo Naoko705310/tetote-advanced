@@ -82,14 +82,15 @@
 }
 
 .blog-card__title a {
-  text-decoration: underline;       // 下線を付ける
-  text-decoration-thickness: 1px;   // 下線の太さを調整（任意）
-  text-underline-offset: 2px;       // 文字と線の間隔を調整（任意）
-  color: inherit;                   // 親の文字色を引き継ぐ
+  text-decoration: underline; 
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;//文字と下線の余白
+  color: $black;  
 }
 
 .blog-card__title a:hover {
-  text-decoration-color: $color-accent; // hover時に色を変える場合
+  color: $color-accent;
+  text-decoration-color: $color-accent;
 }
 
 .blog-card__date {

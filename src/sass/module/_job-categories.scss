@@ -1,7 +1,7 @@
 @use "global" as *;
 
 // 募集カテゴリータグのul
-.categorie-tag__list {
+.category-tag__list {
   display: grid;
   grid-template-columns: 1fr;
   gap: rem(20);
@@ -11,15 +11,15 @@
   }
 }
 
-.categorie-tag__item {
-  background-color: $color-accent-sub;
-  border: 1px solid $black;
-  border-radius: rem(40);
-  padding: rem(18) 0;
-  text-align: center;
+.category-tag__item {
+  // background-color: $color-accent-sub;
+  // border: 1px solid $black;
+  // border-radius: rem(40);
+  // padding: rem(18) 0;
+  // text-align: center;
 }
 
-.categorie-tag__link {
+.category-tag__link {
   display: block;
   font-family: $base-font-family;
   font-size: rem(16);
@@ -28,12 +28,30 @@
   line-height: 1;
   white-space: nowrap;
   overflow: hidden;
+  background-color: $color-accent-sub;
+  border: 1px solid $black;
+  border-radius: rem(40);
+  padding: rem(18) 0;
+  text-align: center;
+  transition: all 0.3s ease;
   @include mq(md) {
     font-size: rem(20);
   }
 }
 
-.categorie-tag__link::after {
+.category-tag__link:hover {
+  background-color: $color-accent;
+  color: $white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.category-tag__link::after {
+  content: "↓";
+  margin-left: rem(20);
+}
+
+.category-tag__link::after {
   content: "↓";
   margin-left: rem(20);
 }

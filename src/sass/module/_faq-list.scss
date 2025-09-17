@@ -4,6 +4,12 @@
 .faq-list__item {
   border-bottom: 1px solid $color-accent;
   padding: rem(40) 0 rem(36) 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.faq-list__item:hover {
+  background-color: $color-accent-sub;
 }
 
 .faq-list__item:first-child {
