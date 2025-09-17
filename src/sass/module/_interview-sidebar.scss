@@ -1,6 +1,12 @@
 @use "global" as *;
 
 .interview-sidebar {
+  position: sticky;
+  top: rem(121); // ヘッダーの高さ分だけ下に配置
+  z-index: 10;
+  // stickyを確実に動作させるため
+  align-self: start; // グリッドアイテム内で上揃え
+  height: fit-content; // コンテンツに合わせた高さ
 
 }
 
@@ -35,12 +41,18 @@
 }
 
 .interview-sidebar__link {
+  display: block;
   font-family: $base-font-family;
   font-size: rem(14);
   color: #999999;
   font-weight: $bold;
   line-height: 1.5;
   padding-left: rem(10);
+  transition: color 0.3s ease;
+}
+
+.interview-sidebar__link:hover {
+  color: $black;
 }
 
 .interview-sidebar__link:before {

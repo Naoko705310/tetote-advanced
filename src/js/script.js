@@ -245,12 +245,49 @@ $(function () {
   /* staff-details.html(スタッフ紹介のページ）専用機能
   /* -------------------------------------------- */
 
-  /* --------------------------------------------
-  /* staff-details.html(スタッフ紹介のページ）
-  //セクションをスクロールした時に、該当する記事まできたら、
-  // sidebarの該当目次の色を$blackに変える(is-activeのつけはずし)
-  // (interview-slider-bar__list)
-  /* -------------------------------------------- */
+/* --------------------------------------------
+/* staff-details.html(スタッフ紹介のページ）
+//セクションをスクロールした時に、該当する記事まできたら、
+// sidebarの該当目次の色を$blackに変える(is-activeのつけはずし)
+// (interview-slider-bar__list)
+/* -------------------------------------------- */
+$(function () {
+  // スタッフ詳細ページのみで実行
+  if ($('.staff-interview__section').length) {
+    const $sidebarLinks = $('.interview-sidebar__link');
+    const $sections = $('.staff-interview__section');
+    
+    // スクロールイベント
+    $(window).on('scroll', function () {
+      const scrollTop = $(window).scrollTop();
+      const windowHeight = $(window).height();
+      const offset = windowHeight / 3; // 画面の1/3の位置で判定
+      
+      let currentSection = '';
+      
+      // 各セクションをチェック
+      $sections.each(function () {
+        const $section = $(this);
+        const sectionTop = $section.offset().top;
+        const sectionHeight = $section.outerHeight();
+        
+        // セクションが画面の1/3の位置を過ぎた場合
+        if (scrollTop + offset >= sectionTop && scrollTop + offset < sectionTop + sectionHeight) {
+          currentSection = $section.attr('id');
+        }
+      });
+      
+      // サイドバーのリンクのアクティブ状態を更新
+      $sidebarLinks.removeClass('is-active');
+      if (currentSection) {
+        $sidebarLinks.filter(`[href="#${currentSection}"]`).addClass('is-active');
+      }
+    });
+    
+    // 初期状態で最初のセクションをアクティブにする
+    $(window).trigger('scroll');
+  }
+});
 
 
 
