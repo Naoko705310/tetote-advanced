@@ -1,4 +1,7 @@
 jQuery(function ($) {
+  /* --------------------------------------------
+  /* ハンバーガーメニュー(topページ)
+  /* -------------------------------------------- */
   $(function () {
     // ハンバーガーメニューのクリック
     $('.js-hamburger').on('click', function () {
@@ -27,6 +30,8 @@ jQuery(function ($) {
       $('.header__logo img').attr('src', './assets/images/common/tetote-logo-white.svg');
     });
   });
+
+  
 });
 
 
