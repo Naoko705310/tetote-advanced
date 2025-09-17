@@ -113,36 +113,36 @@ jQuery(function ($) {
 // js-top-fv-swiper (topページFVのスワイパー)
 //2枚の画像をふわっと表示で切り替える
 /* -------------------------------------------- */
-// $(function () {
-//   // トップページのみで実行
-//   if ($('#top-fv').length) {
-//     const topFvSwiper = new Swiper('.js-top-fv-swiper', {
-//       // 基本設定
-//       loop: true,                    // ループ再生
-//       autoplay: {
-//         delay: 3000,                 // 3秒間隔で自動切り替え
-//         disableOnInteraction: false, // ユーザー操作後も自動再生を継続
-//       },
-//       effect: 'fade',                // フェード効果
-//       fadeEffect: {
-//         crossFade: true,             // クロスフェード
-//       },
-//       speed: 5000,                   // 切り替え速度（5秒）
+$(function () {
+  // トップページのみで実行
+  if ($('#top-fv').length) {
+    const topFvSwiper = new Swiper('.js-top-fv-swiper', {
+      // 基本設定
+      loop: true,                    // ループ再生
+      autoplay: {
+        delay: 3000,                 // 3秒間隔で自動切り替え
+        disableOnInteraction: false, // ユーザー操作後も自動再生を継続
+      },
+      effect: 'fade',                // フェード効果
+      fadeEffect: {
+        crossFade: true,             // クロスフェード
+      },
+      speed: 5000,                   // 切り替え速度（5秒）
       
-//       // ページネーション（必要に応じて）
-//       pagination: {
-//         el: '.swiper-pagination',
-//         clickable: true,
-//       },
+      // ページネーション（必要に応じて）
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
       
-//       // ナビゲーション（必要に応じて）
-//       navigation: {
-//         nextEl: '.swiper-button-next',
-//         prevEl: '.swiper-button-prev',
-//       },
-//     });
-//   }
-// });
+      // ナビゲーション（必要に応じて）
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  }
+});
 
 
   
@@ -151,36 +151,36 @@ jQuery(function ($) {
 // js-top-message-swiper (topページのメッセージスワイパー)
 //自動で止まらずに延々と横スライドし続けるスライダーにする
 /* -------------------------------------------- */
-// $(function () {
-//   // トップページのみで実行
-//   if ($('#top-fv').length) {
-//     const topMessageSwiper = new Swiper('.js-top-message-swiper', {
-//       // 基本設定
-//       loop: true,                    // ループ再生
-//       autoplay: {
-//         delay: 0,                    // 遅延なし
-//         disableOnInteraction: false, // ユーザー操作後も自動再生を継続
-//         reverseDirection: false,     // 通常方向
-//       },
-//       speed: 8000,                   // 8秒かけてスライド
-//       freeMode: {
-//         enabled: true,               // フリーモード
-//         momentum: false,             // 慣性を無効
-//       },
-//       slidesPerView: 'auto',         // スライド幅を自動調整
-//       spaceBetween: 34,              // スライド間の余白34px
+$(function () {
+  // トップページのみで実行
+  if ($('#top-fv').length) {
+    const topMessageSwiper = new Swiper('.js-top-message-swiper', {
+      // 基本設定
+      loop: true,                    // ループ再生
+      autoplay: {
+        delay: 0,                    // 遅延なし
+        disableOnInteraction: false, // ユーザー操作後も自動再生を継続
+        reverseDirection: false,     // 通常方向
+      },
+      speed: 8000,                   // 8秒かけてスライド
+      freeMode: {
+        enabled: true,               // フリーモード
+        momentum: false,             // 慣性を無効
+      },
+      slidesPerView: 'auto',         // スライド幅を自動調整
+      spaceBetween: 34,              // スライド間の余白34px
       
-//       // ページネーション
-//       pagination: {
-//         el: '.top-message__pagination',
-//         clickable: true,
-//       },
+      // ページネーション
+      pagination: {
+        el: '.top-message__pagination',
+        clickable: true,
+      },
       
-//       // 無限ループ用の設定
-//       allowTouchMove: false,         // タッチ操作を無効
-//     });
-//   }
-// });
+      // 無限ループ用の設定
+      allowTouchMove: false,         // タッチ操作を無効
+    });
+  }
+});
 
 
 
@@ -189,6 +189,54 @@ jQuery(function ($) {
 // js-top-member-swiper (topページのスタッフカードのスワイパー)
 //WordPressのACFから入力したカードがランダムで表示される
 /* -------------------------------------------- */
+$(function () {
+  // トップページのみで実行
+  if ($('#top-fv').length) {
+    // スタッフカードをランダムに並び替え
+    const $swiperWrapper = $('.js-top-member-swiper .swiper-wrapper');
+    const $slides = $swiperWrapper.children('.swiper-slide');
+    
+    // ランダムに並び替え
+    const shuffledSlides = $slides.toArray().sort(() => Math.random() - 0.5);
+    
+    // 並び替えたスライドを再配置
+    $swiperWrapper.empty().append(shuffledSlides);
+    
+    // Swiperを初期化
+    const topMemberSwiper = new Swiper('.js-top-member-swiper', {
+      // 基本設定
+      loop: true,                    // ループ再生
+      loopAdditionalSlides: 2,       // ループ用の追加スライド数
+      autoplay: {
+        delay: 4000,                 // 4秒間隔で自動切り替え
+        disableOnInteraction: false, // ユーザー操作後も自動再生を継続
+      },
+      speed: 1000,                   // 切り替え速度
+      slidesPerView: 'auto',         // 自動幅調整
+      spaceBetween: 43,              // スライド間の余白
+      
+      // 左端から開始、右端まで余白なく表示
+      centeredSlides: false,         // 中央寄せを無効
+      freeMode: {
+        enabled: true,               // フリーモードでスムーズなスクロール
+      },
+      
+      // ナビゲーション
+      navigation: {
+        nextEl: '.top-member__next',
+        prevEl: '.top-member__prev',
+      },
+      
+      // レスポンシブ設定
+      breakpoints: {
+        768: {
+          slidesPerView: 3.5,        // PC時は3.5枚表示
+          spaceBetween: 43,          // PC時の余白も43px
+        }
+      }
+    });
+  }
+});
 
 
 
