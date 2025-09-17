@@ -1,0 +1,14 @@
+@use "global" as *;
+
+/* アニメーション用のクラス */
+.fade-in {
+  opacity: 0;
+  transform: translateY(150px) scale(0.8) rotateX(20deg);
+  transition: opacity 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+              transform 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.fade-in.is-animated {
+  opacity: 1;
+  transform: translateY(0) scale(1) rotateX(0deg);
+}

@@ -38,7 +38,34 @@ jQuery(function ($) {
   /* --------------------------------------------
   /* headerをFVの下までスクロールした時に、page-headerと同じデザインに変える
   /* -------------------------------------------- */
-
+  $(function () {
+    // トップページのみで実行
+    if ($('#top-fv').length) {
+      const $header = $('.js-header');
+      const $topFv = $('#top-fv');
+      const $logoImg = $('.header__logo img');
+      
+      // FVセクションの高さを取得
+      const fvHeight = $topFv.outerHeight();
+      
+      // スクロールイベント
+      $(window).on('scroll', function () {
+        const scrollTop = $(window).scrollTop();
+        
+        if (scrollTop > fvHeight) {
+          // FVを過ぎたらヘッダーにクラスを追加
+          $header.addClass('is-scrolled');
+          // ロゴを黒に変更
+          $logoImg.attr('src', './assets/images/common/tetote-logo.svg');
+        } else {
+          // FV内にいる場合はクラスを削除
+          $header.removeClass('is-scrolled');
+          // ロゴを白に戻す
+          $logoImg.attr('src', './assets/images/common/tetote-logo-white.svg');
+        }
+      });
+    }
+  });
 
 
   /* --------------------------------------------
@@ -50,14 +77,72 @@ jQuery(function ($) {
   //各セクションの要素をふわっと表示させる（topページ）
   //スクロールしてセクションまで来たら、ふわっと表示
   /* -------------------------------------------- */
+  $(function () {
+    // トップページのみで実行
+    if ($('#top-fv').length) {
+      // アニメーション対象の要素を取得
+      const $fadeElements = $('.js-fade-in');
+      
+      // 要素が画面に入ったかチェックする関数
+      function checkFadeIn() {
+        $fadeElements.each(function () {
+          const $element = $(this);
+          const elementTop = $element.offset().top;
+          const elementBottom = elementTop + $element.outerHeight();
+          const windowTop = $(window).scrollTop();
+          const windowBottom = windowTop + $(window).height();
+          
+          // 要素が画面に入ったらクラスを追加
+          if (elementBottom > windowTop && elementTop < windowBottom) {
+            $element.addClass('is-animated');
+          }
+        });
+      }
+      
+      // 初期状態で既に画面内にある要素をチェック
+      checkFadeIn();
+      
+      // スクロール時にチェック
+      $(window).on('scroll', checkFadeIn);
+    }
+  });
 
 
-
-  /* --------------------------------------------
-  /* index.html(topページ)
-  // js-top-fv-swiper (topページFVのスワイパー)
-  //2枚の画像をふわっと表示で切り替える
-  /* -------------------------------------------- */
+/* --------------------------------------------
+/* index.html(topページ)
+// js-top-fv-swiper (topページFVのスワイパー)
+//2枚の画像をふわっと表示で切り替える
+/* -------------------------------------------- */
+$(function () {
+  // トップページのみで実行
+  if ($('#top-fv').length) {
+    const topFvSwiper = new Swiper('.js-top-fv-swiper', {
+      // 基本設定
+      loop: true,                    // ループ再生
+      autoplay: {
+        delay: 3000,                 // 3秒間隔で自動切り替え
+        disableOnInteraction: false, // ユーザー操作後も自動再生を継続
+      },
+      effect: 'fade',                // フェード効果
+      fadeEffect: {
+        crossFade: true,             // クロスフェード
+      },
+      speed: 5000,                   // 切り替え速度（5秒）
+      
+      // ページネーション（必要に応じて）
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      
+      // ナビゲーション（必要に応じて）
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  }
+});
 
 
   

@@ -48,6 +48,21 @@
   color: $black;
 }
 
+/* トップページでスクロール時のスタイル */
+.header.is-scrolled {
+  background-color: $white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header.is-scrolled .hamburger span:not(.hamburger-text) {
+  background-color: $black;
+}
+
+.header.is-scrolled .hamburger .hamburger-text {
+  color: $black;
+}
+
+
 
 
 
