@@ -257,6 +257,27 @@ $(function () {
     const $sidebarLinks = $('.interview-sidebar__link');
     const $sections = $('.staff-interview__section');
     
+    // 目次リンクのクリックイベント
+    $sidebarLinks.on('click', function (e) {
+      e.preventDefault();
+      
+      const targetId = $(this).attr('href');
+      const $targetSection = $(targetId);
+      
+      if ($targetSection.length) {
+        // 既存のマージンをリセット
+        $sections.removeClass('has-scroll-margin');
+        
+        // クリックされたセクションにマージンを追加
+        $targetSection.addClass('has-scroll-margin');
+        
+        // スムーズスクロール
+        $('html, body').animate({
+          scrollTop: $targetSection.offset().top - 121 // ヘッダー高さ分を引く
+        }, 800);
+      }
+    });
+    
     // スクロールイベント
     $(window).on('scroll', function () {
       const scrollTop = $(window).scrollTop();
@@ -288,7 +309,6 @@ $(function () {
     $(window).trigger('scroll');
   }
 });
-
 
 
   /* --------------------------------------------
