@@ -335,10 +335,32 @@ $(function () {
   /* details.html, faq.html (募集要項とFAQページ)専用機能
   /* -------------------------------------------- */
 
-  /* --------------------------------------------
-  /* details.html, faq.html (募集要項とFAQページ)
-  // category-tag__itemをクリックしたら、該当のセクションまでスクロールする
-  /* -------------------------------------------- */
+/* --------------------------------------------
+/* details.html, faq.html (募集要項とFAQページ)
+// category-tag__itemをクリックしたら、該当のセクションまでスクロールする
+/* -------------------------------------------- */
+$(function () {
+  // details.html, faq.htmlページのみで実行
+  if ($('.category-tag__link').length) {
+    const $categoryLinks = $('.category-tag__link');
+    const headerHeight = $('.js-header').outerHeight() || 100; // ヘッダーの高さを取得
+    
+    // カテゴリータグのクリックイベント
+    $categoryLinks.on('click', function (e) {
+      e.preventDefault();
+      
+      const targetId = $(this).attr('href');
+      const $targetSection = $(targetId);
+      
+      if ($targetSection.length) {
+        // スムーズスクロール（ヘッダー高さ分を引く）
+        $('html, body').animate({
+          scrollTop: $targetSection.offset().top - headerHeight - 20 // ヘッダー高さ + 余白20px
+        }, 800);
+      }
+    });
+  }
+});
 
 
   
@@ -347,8 +369,161 @@ $(function () {
   /* -------------------------------------------- */
 
   /* --------------------------------------------
-  /* entry.html (エントリーページ）
-  // フォームのバリデーション
-  //入力がない場合送信ボタンを押せない様にする
-  /* -------------------------------------------- */
+/* entry.html (エントリーページ）
+// フォームのバリデーション
+//入力がない場合送信ボタンを押せない様にする
+/* -------------------------------------------- */
+
+$(function () {
+  // エントリーページのみで実行
+  if ($('.entry-form').length) {
+    const $form = $('.entry-form');
+    const $submitBtn = $('.entry-form__submit');
+    const $requiredFields = $form.find('[required]');
+    const $errorMessage = $('.entry-form__error-message'); // HTMLから取得
+    
+    // 初期状態で送信ボタンを無効化
+    $submitBtn.prop('disabled', true);
+    
+    // 必須項目の入力チェック関数
+    function checkRequiredFields() {
+      let isValid = true;
+      
+      $requiredFields.each(function () {
+        const $field = $(this);
+        const value = $field.val().trim();
+        
+        if (value === '') {
+          isValid = false;
+          return false;
+        }
+        
+        if ($field.attr('type') === 'radio') {
+          const $radioGroup = $field.closest('.entry-form__radio-group');
+          if ($radioGroup.find('input[type="radio"]:checked').length === 0) {
+            isValid = false;
+            return false;
+          }
+        }
+        
+        if ($field.attr('type') === 'checkbox') {
+          if (!$field.is(':checked')) {
+            isValid = false;
+            return false;
+          }
+        }
+      });
+      
+      // 送信ボタンの状態を更新
+      $submitBtn.prop('disabled', !isValid);
+      
+      // エラーメッセージの表示/非表示
+      if (isValid) {
+        $errorMessage.hide();
+      } else {
+        $errorMessage.show();
+      }
+    }
+    
+    // 入力時のイベント
+    $requiredFields.on('input change', function () {
+      checkRequiredFields();
+    });
+    
+    // ラジオボタン・チェックボックスのイベント
+    $form.find('input[type="radio"], input[type="checkbox"]').on('change', function () {
+      checkRequiredFields();
+    });
+    
+    // 初期チェック
+    checkRequiredFields();
+    
+    // 送信時の処理を追加
+    $form.on('submit', function (e) {
+      e.preventDefault(); // 本来の送信を止める（サーバー送信不要の場合）
+      if (!$submitBtn.prop('disabled')) {
+        window.location.href = 'entry-thanks.html'; // サンクスページに遷移
+      } else {
+        $errorMessage.show(); // 念のためバリデーションNGならエラーを表示
+      }
+    });
+  }
+});
+
+
+
+// $(function () {
+//   // エントリーページのみで実行
+//   if ($('.entry-form').length) {
+//     const $form = $('.entry-form');
+//     const $submitBtn = $('.entry-form__submit');
+//     const $requiredFields = $form.find('[required]');
+//     const $errorMessage = $('.entry-form__error-message'); // HTMLから取得
+    
+//     // 初期状態で送信ボタンを無効化
+//     $submitBtn.prop('disabled', true);
+    
+//     // 必須項目の入力チェック関数
+//     function checkRequiredFields() {
+//       let isValid = true;
+      
+//       $requiredFields.each(function () {
+//         const $field = $(this);
+//         const value = $field.val().trim();
+        
+//         // 値が空の場合は無効
+//         if (value === '') {
+//           isValid = false;
+//           return false; // ループを抜ける
+//         }
+        
+//         // ラジオボタンの場合
+//         if ($field.attr('type') === 'radio') {
+//           const $radioGroup = $field.closest('.entry-form__radio-group');
+//           if ($radioGroup.find('input[type="radio"]:checked').length === 0) {
+//             isValid = false;
+//             return false;
+//           }
+//         }
+        
+//         // チェックボックスの場合
+//         if ($field.attr('type') === 'checkbox') {
+//           if (!$field.is(':checked')) {
+//             isValid = false;
+//             return false;
+//           }
+//         }
+//       });
+      
+//       // 送信ボタンの状態を更新
+//       $submitBtn.prop('disabled', !isValid);
+      
+//       // エラーメッセージの表示/非表示
+//       if (isValid) {
+//         $errorMessage.hide();
+//       } else {
+//         $errorMessage.show();
+//       }
+//     }
+    
+//     // 入力時のイベント
+//     $requiredFields.on('input change', function () {
+//       checkRequiredFields();
+//     });
+    
+//     // ラジオボタン・チェックボックスのイベント
+//     $form.find('input[type="radio"], input[type="checkbox"]').on('change', function () {
+//       checkRequiredFields();
+//     });
+    
+//     // 初期チェック
+//     checkRequiredFields();
+//   }
+// });
+
+
+
+
+
+
 });

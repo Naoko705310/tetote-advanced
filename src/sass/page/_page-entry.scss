@@ -20,13 +20,21 @@
 
 .page-entry__contents-wrapper {
   background-color: $white;
-padding: rem(20) rem(15);
+  padding: rem(20) rem(15);
   @include mq(md) {
     padding: rem(58) rem(71) rem(81) rem(71);
   }
 }
 
-.page-entry__en {
+.page-entry__header {
+@include mq(md) {
+  max-width: rem(530);//要確認 カンプでは510px
+  margin: 0 auto;
+}
+
+}
+
+.page-entry__title--en {
   font-family: $base-font-family;
   font-size: rem(18);
   color: $black;
@@ -70,7 +78,7 @@ padding: rem(20) rem(15);
   }
 }
 
-.page-entry__entry-form {
+.page-entry__title--entry-form {
   margin-top: rem(40);
   border-top: 1px solid $color-accent;
   @include mq(md) {

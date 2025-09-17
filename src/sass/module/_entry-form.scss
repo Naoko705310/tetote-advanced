@@ -393,6 +393,17 @@
   margin-top: rem(62);
 }
 
+// エラーメッセージ
+.entry-form__error-message {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: rem(12) rem(16);
+  border: 1px solid #ffcdd2;
+  border-radius: rem(4);
+  margin-bottom: rem(20);
+  font-size: rem(14);
+}
+
 .entry-form__submit {
   width: rem(256);
   // height: rem(56);

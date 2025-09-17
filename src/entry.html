@@ -122,15 +122,14 @@
       <div class="page-entry__inner inner">
         <div class="page-entry__contents-wrapper">
           <header class="page-entry__header">
-            <h2 class="page-entry__en">ENTRY FORM</h2>
+            <h2 class="page-entry__title--en">ENTRY FORM</h2>
             <h3 class="page-entry__title"><span class="page-entry__title--color">新卒・中途採用</span><br class="u-mobile">エントリーフォーム</h3>
             <p class="page-entry__note">
               当社へ入社をご希望の方は、下記の送信フォームより送信してください。<br>
               <span class="page-entry__required-note">※は必須項目になります。</span>
             </p>
           </header>
-    
-          <form class="page-entry__entry-form entry-form" action="#" method="post" novalidate>
+          <form class="page-entry__title--entry-form entry-form" action="#" method="post" novalidate>
             <fieldset class="entry-form__fieldset">
               <legend class="visually-hidden">応募者情報</legend>
     
@@ -272,6 +271,11 @@
                   <input type="checkbox" name="privacy" value="agree" required aria-required="true">
                   個人情報保護方針に同意する
                 </label>
+              </div>
+
+              <!-- エラーメッセージ -->
+              <div class="entry-form__error-message" style="display: none;" role="alert" aria-live="polite">
+                必須項目に入力がありません
               </div>
     
               <!-- 送信 -->
