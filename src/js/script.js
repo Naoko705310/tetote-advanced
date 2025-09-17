@@ -311,10 +311,23 @@ $(function () {
 });
 
 
-  /* --------------------------------------------
-  /* staff-details.html(スタッフ紹介のページ)
-  // other-members__listは、ランダム表示
-  /* -------------------------------------------- */
+/* --------------------------------------------
+/* staff-details.html(スタッフ紹介のページ)
+// other-members__listは、ランダム表示
+/* -------------------------------------------- */
+$(function () {
+  // スタッフ詳細ページのみで実行
+  if ($('.other-members__items').length) {
+    const $otherMembersList = $('.other-members__items');
+    const $memberItems = $otherMembersList.children('.other-members__item');
+    
+    // ランダムに並び替え
+    const shuffledItems = $memberItems.toArray().sort(() => Math.random() - 0.5);
+    
+    // 並び替えたアイテムを再配置
+    $otherMembersList.empty().append(shuffledItems);
+  }
+});
 
 
 
