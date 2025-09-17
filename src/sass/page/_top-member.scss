@@ -10,6 +10,7 @@
 .top-member__inner {
   position: relative;
   z-index: 0;
+  overflow: hidden; // はみ出し防止
 }
 
 .top-member__section-title {
@@ -36,11 +37,13 @@
 // Swiper 本体
 .swiper.top-member__swiper {
   width: 100%;
-  height: 100%;
   position: relative; // blog は absolute だけど、member は通常フローに載せてOK
   z-index: 1;
   margin-top: rem(50);
   @include mq(md) {
+    // width: 100vw;       // 画面幅いっぱいに
+    // margin-right: calc(50% - 50vw);//右側は画面にくっつける
+    // padding-left: rem(34); // inner内の左余白を確保
     margin-top: rem(52);
   }
 }
@@ -57,7 +60,8 @@
   width: rem(246);
   height: auto;
   @include mq(md) {
-    width: rem(300);
+    // width: auto; // Swiperに任せる
+    max-width: rem(300);
   }
 }
 
