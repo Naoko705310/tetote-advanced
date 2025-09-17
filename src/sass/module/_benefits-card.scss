@@ -84,13 +84,18 @@
   position: absolute;
   right: rem(13);
   bottom: rem(39);
+  transition: transform 0.3s ease;
   @include mq(md) {
     width: rem(58);
     height: rem(58);
     right: rem(20);
     bottom: rem(66);
-
   }
+}
+
+// カードをhoverした時に、ボタンを右へ移動
+.benefits-card:hover .benefits-card__circle-button {
+  transform: scale(1.1) translateX(rem(10));
 }
 
 // タイトル
