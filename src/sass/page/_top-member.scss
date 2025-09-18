@@ -70,15 +70,35 @@
 
 // ナビゲーション
 .top-member__button-wrapper {
-  margin-top: rem(100);
+  margin-top: rem(64);
   position: relative;
   display: flex;
   justify-content: center; // VIEW MORE を中央に
   align-items: center;
+  @include mq(md) {
+    margin-top: rem(100);
+  }
 }
 
-.top-member__button {
-  // 中央のボタン（デフォルトで中央に来る）
+//top-memberのボタン（サイズ違い）
+.button.top-member__button {
+  width: rem(277);
+  font-family: $base-font-family;
+  font-size: rem(16);
+  color: $black;
+  font-weight: $normal;
+  line-height: 1;
+  padding: rem(23) 0;
+}
+
+// 矢印のサイズ
+.button.top-member__button::after {
+  width: rem(16);
+  height: rem(16);
+  @include mq(md) {
+    width: rem(20);
+    height: rem(20);
+  }
 }
 
 .top-member__navigation {
