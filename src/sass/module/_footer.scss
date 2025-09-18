@@ -8,7 +8,7 @@
 
 .footer__inner {
   background-color: $color-accent-sub; // PCでは中身部分だけ背景色
-  padding-top: rem(169);
+  padding-top: rem(51);//SPの時は、ctaの白ブロックの下からの高さに合わせる
   padding-bottom: rem(24);
   @include mq(md) {
     width: 91.111%; //1312/1440

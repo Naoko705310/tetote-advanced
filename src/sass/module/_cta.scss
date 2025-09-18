@@ -54,3 +54,13 @@
     bottom: rem(-136);
   }
 }
+
+// ボタンサイズ違い
+.entry-box__button.button.button--entry.cta__button {
+  width: rem(200);
+  padding: rem(20) 0;
+  @include mq(md) {
+    width: rem(556);
+    padding: rem(27) 0;
+  }
+}
