@@ -12,10 +12,8 @@
   color: $black;
   font-weight: $bold;
   line-height: 1;
-  margin-top: rem(70);
   @include mq(md) {
     font-size: rem(32);
-    margin-top: rem(145);
   }
 }
 
@@ -37,7 +35,8 @@
   border-bottom: 1px dotted $black;
   padding: rem(36) 0;
   @include mq(md) {
-    grid-template-columns: 22.753% 1fr;//253-gap20/1024
+    grid-template-columns: 21.753% 1fr;
+    // grid-template-columns: 22.753% 1fr;//253-gap20/1024
     gap: rem(20);
   }
 }
@@ -54,9 +53,6 @@
   color: $black;
   font-weight: $bold;
   line-height: 1;
-  @include mq(md) {
-    font-size: rem(18);
-  }
 }
 
 // リストの中の内容
@@ -75,7 +71,22 @@
   color: $black;
   font-weight: $normal;
   line-height: 1.5;
-  list-style: disc;
-  padding-left: rem(20);
+  list-style: none;
 }
+
+.benefits-list__desc-list li {
+  position: relative;
+  padding-left: rem(12);
+}
+
+.benefits-list__desc-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: rem(12);
+  color: $black;
+}
+
+
 

@@ -3,3 +3,11 @@
 .page-benefits {
 
 }
+
+.page-benefits__users-voice {
+  margin-top: rem(70);
+  @include mq(md) {
+    margin-top: rem(126);
+  }
+
+}
