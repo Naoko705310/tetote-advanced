@@ -11,6 +11,15 @@
   }
 }
 
+.business-info-card:first-child {
+  padding-top: 0;
+}
+
+.business-info-card:last-child {
+  padding-bottom: 0;
+}
+
+
 .business-info-card:not(:first-child) {
   border-top: 1px solid $color-accent;
 }

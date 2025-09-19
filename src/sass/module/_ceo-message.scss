@@ -52,7 +52,7 @@
   margin-top: rem(26);
   @include mq(md) {
     font-size: rem(32);
-    margin-left: rem(-63);
+    margin-left: rem(-80);//484-421=63+17=80
   }
 }
 

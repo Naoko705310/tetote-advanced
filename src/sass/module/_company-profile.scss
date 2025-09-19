@@ -1,21 +1,5 @@
 @use "global" as *;
 
-.page-about__company-profile {
-
-}
-
-.company-profile {
-
-}
-
-.company-profile__inner {
-
-}
-
-.inner {
-
-}
-
 .company-profile__title {
   font-family: $base-font-family;
   font-size: rem(20);
@@ -24,6 +8,7 @@
   line-height: 1;
   @include mq(md) {
     font-size: rem(32);
+    padding-left: rem(22);
   }
 }
 
@@ -48,8 +33,14 @@
     grid-template-columns: 23.571% 1fr;
     gap: 0;
     padding: rem(36) 0;
+    align-items: start;
   }
 }
+
+.company-profile__item:first-child {
+  padding-top: 0;
+}
+
 .company-profile__item:not(:first-child) {
   border-top: 1px dotted $color-accent;
 }
@@ -64,11 +55,17 @@
 }
 
 // リスト詳細
-.company-profile__item dt {
+.company-profile__item dd {
   font-family: $base-font-family;
   font-size: rem(16);
   color: $black;
   font-weight: $normal;
   line-height: 1;
+}
+
+.company-profile__item ul {
+  list-style: disc;
+  padding-left: rem(20);
+  line-height: 1.5;
 }
 

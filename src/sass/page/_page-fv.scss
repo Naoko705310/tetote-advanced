@@ -15,6 +15,13 @@
   }
 }
 
+.page-fv__inner.inner {
+  @include mq(md) {
+    max-width: rem(980 + 44);//コンテンツが980でpaddingが22*2
+    padding: 0 rem(22);
+  }
+}
+
 .page-fv__contents {
   padding-top: rem(75);
   padding-bottom: rem(98);
