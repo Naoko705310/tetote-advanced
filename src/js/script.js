@@ -213,7 +213,7 @@ $(function () {
       },
       speed: 1000,                   // 切り替え速度
       slidesPerView: 'auto',         // 自動幅調整
-      spaceBetween: 43,              // スライド間の余白
+      spaceBetween: 23,              // スライド間の余白
       
       // 左端から開始、右端まで余白なく表示
       centeredSlides: false,         // 中央寄せを無効

@@ -20,6 +20,9 @@
   content: "";
   display: block;
   padding-top: calc(121 / 121 * 100%);
+  @include mq(md) {
+    padding-top: calc(156 / 180 * 100%);
+  }
 }
 
 .blog-card__image img {

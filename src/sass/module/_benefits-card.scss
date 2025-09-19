@@ -42,7 +42,7 @@
   color: $black;
   font-weight: $normal;
   line-height: 1;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.15em; /* ＝15% */
   position: absolute;
   top: 0;
   right: rem(13);
@@ -123,7 +123,7 @@
 .benefits-card__body {
   margin-top: rem(21);
   @include mq(md) {
-    margin-top: rem(36);
+    margin-top: rem(27);
   }
 }
 

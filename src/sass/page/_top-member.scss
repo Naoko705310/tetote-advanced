@@ -15,7 +15,8 @@
 
 .top-member__section-title {
   @include mq(md) {
-    margin-left: rem(76 - 24);
+    margin-left: rem(-132);
+    // margin-left: rem(76 - 24);
   }
 }
 
@@ -23,6 +24,7 @@
   margin-top: rem(19);
   @include mq(md) {
     margin-top: rem(10);
+    padding-left: rem(34);
   }
 }
 
@@ -41,10 +43,12 @@
   z-index: 1;
   margin-top: rem(50);
   @include mq(md) {
-    width: 100vw;       // 画面幅いっぱいに
-    margin-right: calc(50% - 50vw);//右側は画面にくっつける
-    margin-top: rem(52);
+    // 左側はinnerのpaddingを維持
     padding-left: rem(34);
+    // 右側は画面端まで伸ばす
+    width: calc(100% + 50vw - 50%);
+    margin-right: calc(50% - 50vw);
+    margin-top: rem(52);
   }
 }
 
@@ -61,11 +65,14 @@
 
 // swiper-wrapper配下の奇数・偶数スライドをずらす
 .top-member__swiper .swiper-slide:nth-child(odd) {
-  margin-bottom: rem(27);
+  // margin-bottom: rem(27);
 }
 
 .top-member__swiper .swiper-slide:nth-child(even) {
-  margin-top: rem(27);
+  margin-top: rem(25);
+  @include mq(md) {
+    margin-top: rem(36);
+  }
 }
 
 // ナビゲーション
@@ -76,7 +83,7 @@
   justify-content: center; // VIEW MORE を中央に
   align-items: center;
   @include mq(md) {
-    margin-top: rem(100);
+    margin-top: rem(80);
   }
 }
 
@@ -89,6 +96,10 @@
   font-weight: $normal;
   line-height: 1;
   padding: rem(23) 0;
+  @include mq(md) {
+    width: rem(355);
+    padding: rem(30) 0;
+  }
 }
 
 // 矢印のサイズ

@@ -21,10 +21,12 @@
 
 .staff-card__image {
   position: relative;
-  padding-bottom: rem(18);
+  margin-bottom: rem(18);
   aspect-ratio: 246 / 292; // 縦横比を固定
   border-radius: rem(30); 
   @include mq(md) {
+    width: rem(300);
+    height: rem(379);
     aspect-ratio: 300 / 379; // 縦横比を固定
   }
 }
@@ -43,7 +45,7 @@
   justify-content: flex-start;
   gap: rem(6);
   position: absolute;
-  bottom: 0;
+  bottom: rem(-18);
   left: 0;
 }
 
@@ -63,7 +65,7 @@
 }
 
 .staff-card__body {
-  margin-top: rem(16);
+  margin-top: rem(16 + 18);
 }
 
 .staff-card__meta {

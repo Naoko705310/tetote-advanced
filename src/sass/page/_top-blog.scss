@@ -25,6 +25,31 @@
   gap: rem(13);
 }
 
+.top-blog__contents-wrapper {
+  @include mq(md) {
+    padding: 0 rem(36);
+  }
+}
+// .top-blog__section-title {
+//   .section-title--jp {
+//     font-family: $base-font-family;
+//     font-size: rem(32);
+//     font-weight: $bold;
+//     color: $black;
+//     line-height: 1;
+//     position: absolute;
+//     top: 50%;
+//     left: 0;                   // デフォルトは左寄せ
+//     transform: translateY(-50%); // 上下中央揃え
+//     z-index: 1;
+//     @include mq(md) {
+//       left: 0;                 // PCでも左寄せのまま
+//       transform: translateY(-50%);
+//       font-size: rem(52);
+//     }
+//   }
+// }
+
 // PCの時はタイトル右横
 .top-blog__button-wrapper--pc {
   display: none;

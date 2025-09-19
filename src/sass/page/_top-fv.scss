@@ -54,6 +54,7 @@
   padding: 0 rem(12);
   @include mq(md) {
     font-size: rem(96);
+    padding: 0 rem(66);
   }
 }
 
@@ -86,6 +87,7 @@
   @include mq(md) {
     width: calc(1263 / 1440 * 100%);
     margin-top: rem(63);
+    margin-left: rem(71);
   }
 }
 

@@ -18,6 +18,7 @@
   margin-top: rem(19);
   @include mq(md) {
     margin-top: rem(10);
+    text-align: center;
   }
 }
 
@@ -28,7 +29,7 @@
   font-weight: $normal;
   line-height: 1.5;
   @include mq(md) {
-    font-size: rem(18);
+    line-height: 1;
   }
 }
 
