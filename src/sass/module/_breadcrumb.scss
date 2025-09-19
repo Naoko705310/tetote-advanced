@@ -9,3 +9,10 @@
   line-height: 1;
   padding: rem(20) rem(24);
 }
+
+.breadcrumb__inner {
+  @include mq(md) {
+    max-width: rem(986);
+    margin: 0 auto;
+  }
+}

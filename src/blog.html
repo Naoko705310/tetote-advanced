@@ -125,15 +125,17 @@
     </section>
     <!-- パンくずリスト -->
     <nav class="page-fv__breadcrumb breadcrumb" aria-label="パンくずリスト">
-      <a href="./index.html">TOP</a>
-      <span class="page-fv__breadcrumb-separator">&gt;</span>
-      <span class="page-fv__breadcrumb-current">STAFF</span>
+      <div class="breadcrumb__inner">
+        <a href="./index.html">TOP</a>
+        <span class="page-fv__breadcrumb-separator">&gt;</span>
+        <span class="page-fv__breadcrumb-current">BLOG</span>
+      </div>
     </nav>
     <!-- ブログ一覧 -->
-    <section class="page-blog__blog-list blog-list">
-      <div class="blog-list__inner inner">
+    <section class="page-blog">
+      <div class="page-blog__inner inner">
         <!-- blog-cards ブログカード群 -->
-        <ul class="top-blog__items page-blog__items blog-cards">
+        <ul class="top-blog__items page-blog__items blog-cards blog-list">
           <li class="top-blog__item page-blog__item">
             <!-- blog-card -->
             <article class="blog-card">
