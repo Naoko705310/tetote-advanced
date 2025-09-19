@@ -6,13 +6,19 @@
   background-color: $color-accent-sub;
   @include mq(md) {
     padding-top: rem(125);
-    padding-bottom: (139);
+    padding-bottom: rem(139);
   }
 }
 
 // section-titleが見切れるように
 .top-recruitment__inner {
+  padding: 0 rem(17);
   overflow: hidden;
+  @include mq(md) {
+    max-width: rem(1024);
+    margin: 0 auto;
+    padding: 0 rem(34);
+  }
 }
 
 .inner {
@@ -20,7 +26,10 @@
 }
 
 .top-recruitment__section-title.section-title {
-
+@include mq(md) {
+  display: block;
+  text-align: center;
+}
 
 }
 
@@ -31,7 +40,8 @@
 .top-recruitment__description {
   margin-top: rem(19);
   @include mq(md) {
-    margin-top: rem(31);
+    margin-top: rem(10);
+    text-align: center;
   }
 }
 
@@ -49,16 +59,3 @@
     margin-top: rem(64);
   }
 }
-
-.recruitment-links {
-
-}
-
-.top-recruitment__item {
-
-}
-
-.recruitment-link {
-
-}
-

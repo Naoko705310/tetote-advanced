@@ -103,6 +103,9 @@
   font-weight: $normal;
   line-height: 1;
   margin-top: auto;
+  @include mq(md) {
+    margin-top: rem(37);
+  }
 }
 
 

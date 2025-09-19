@@ -49,8 +49,8 @@
   left: 50%;
   transform: translateX(-50%); // 横方向の中央寄せ
   @include mq(md) {
-    width: 64.930%;
-    max-width: rem(935);
+    width: 66.388%;//956/1440
+    max-width: rem(956);
     bottom: rem(-136);
   }
 }

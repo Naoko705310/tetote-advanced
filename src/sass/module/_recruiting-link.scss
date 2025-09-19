@@ -15,6 +15,7 @@
   text-align: center;
   @include mq(md) {
     font-size: rem(18);
+    padding: rem(50) 0;
   }
 }
 
