@@ -1,5 +1,7 @@
 @use "global" as *;
 
+// 新卒・中途採用エントリーフォーム
+
 .page-entry {
   background-color: $color-accent-sub;
   padding-top: rem(33);
@@ -32,12 +34,10 @@
   }
 }
 .page-entry__heading {
-@include mq(md) {
-  // max-width: rem(530);//要確認 カンプでは510px
-  // margin: 0 auto;
-  display: inline-block;
-  text-align: center;
-}
+  @include mq(md) {
+    display: inline-block;
+    text-align: center;
+  }
 }
 
 .page-entry__title--en {

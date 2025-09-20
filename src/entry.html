@@ -135,8 +135,7 @@
           </div>
           <form class="page-entry__title--entry-form entry-form" action="#" method="post" novalidate>
             <fieldset class="entry-form__fieldset">
-              <legend class="visually-hidden">応募者情報</legend>
-    
+              <!-- <legend class="visually-hidden">応募者情報</legend> -->
               <!-- お名前 -->
               <div class="entry-form__field">
                 <label for="name" class="entry-form__label">お名前 <span aria-hidden="true">※</span></label>
@@ -232,8 +231,8 @@
               </div>
     
               <!-- 希望職種 -->
-              <div class="entry-form__field">
-                <label class="entry-form__label">希望職種 <span aria-hidden="true">※</span></label>
+              <div class="entry-form__field entry-form__field--job">
+                <label class="entry-form__label entry-form__label--job">希望職種 <span aria-hidden="true">※</span></label>
                 <div class="entry-form__radio-group">
                   <label>
                     <input type="radio" name="job" value="consultant" required aria-required="true">
@@ -253,14 +252,14 @@
               <!-- 自己PR -->
               <div class="entry-form__field">
                 <label for="pr" class="entry-form__label">自己PR <span aria-hidden="true">※</span></label>
-                <textarea id="pr" name="pr" class="entry-form__textarea" rows="6" placeholder="例：志望動機、自己PR" required aria-required="true"></textarea>
+                <textarea id="pr" name="pr" class="entry-form__textarea" rows="8" placeholder="例：志望動機、自己PR" required aria-required="true"></textarea>
               </div>
     
               <!-- 当社を知ったきっかけ -->
-              <div class="entry-form__field">
-                <label class="entry-form__label">当社を知ったきっかけを教えて下さい。</label>
+              <div class="entry-form__field entry-form__field--source">
+                <label class="entry-form__label entry-form__label--source">当社を知ったきっかけを教えて下さい。</label>
                 <div class="entry-form__checkbox-group">
-                  <label><input type="checkbox" name="source" value="twitter"> X旧(Twitter)</label>
+                  <label><input type="checkbox" name="source" value="twitter"> X(旧Twitter)</label>
                   <label><input type="checkbox" name="source" value="facebook"> Facebook</label>
                   <label><input type="checkbox" name="source" value="instagram"> Instagram</label>
                   <label><input type="checkbox" name="source" value="search"> 検索広告</label>
@@ -278,9 +277,9 @@
               </div>
 
               <!-- エラーメッセージ -->
-              <div class="entry-form__error-message" style="display: none;" role="alert" aria-live="polite">
+              <!-- <div class="entry-form__error-message" style="display: none;" role="alert" aria-live="polite">
                 必須項目に入力がありません
-              </div>
+              </div> -->
     
               <!-- 送信 -->
               <div class="entry-form__actions">
