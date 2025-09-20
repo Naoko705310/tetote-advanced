@@ -3,7 +3,7 @@
 // QとAを内包するアイテム
 .faq-list__item {
   border-bottom: 1px solid $color-accent;
-  padding: rem(40) 0 rem(36) 0;
+  padding: rem(36) 0;
   transition: background-color 0.3s ease, color 0.3s ease;
   cursor: pointer;
 }
@@ -16,64 +16,68 @@
   border-top: 1px solid $color-accent;
 }
 
+// buttonタグに対して
 .faq-list__question {
   width: 100%;
   font-family: $base-font-family;
   font-size: rem(16);
   color: $black;
   font-weight: $normal;
-  line-height: 1.5;
+  line-height: 1;
   text-align: left;
-  display: flex;       // Q・テキスト・アイコンを横並び
-  align-items: center; // 上揃え
+  position: relative;
+  padding-left: rem(36);
 }
 
-/* Qマーク */
-.faq-list__q {
+// Qマーク
+.faq-list__question::before {
+  content: "Q";
   display: inline-block;
   width: rem(16);
+  height: rem(24);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%); /* 上下中央に配置 */
   font-family: $second-font-family;
   font-size: rem(24);
   color: $color-accent;
   font-weight: $normal;
   line-height: 1;
-  margin-right: rem(20);
-  flex-shrink: 0; // 固定幅
 }
 
-.faq-list__label {
-  flex: 1; // テキストが余白を埋める
-}
-
+// プラスマイナスアイコン（2本の線）
 .faq-list__icon {
-  position: relative;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
   width: rem(16);
   height: rem(16);
-  margin-left: auto;
-  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .faq-list__icon span {
   position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
+  width: rem(16);
   height: 2px;
   background-color: $color-accent;
-  transition: transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s ease;
 }
 
 .faq-list__icon span:first-child {
-  transform: rotate(0deg); /* 横線 */
+  transform: rotate(0deg); /* 横線（固定） */
 }
 
 .faq-list__icon span:last-child {
-  transform: rotate(90deg); /* 縦線 */
+  transform: rotate(90deg); /* 縦線（90度回転） */
 }
 
 /* 開いているとき（aria-expanded=trueのとき） */
 .faq-list__question[aria-expanded="true"] .faq-list__icon span:last-child {
-  opacity: 0; /* 縦棒を消してマイナスに */
+  transform: rotate(0deg); /* 縦線を横線に回転（マイナス状態） */
 }
 
 .faq-list__answer {
@@ -82,10 +86,15 @@
   font-size: rem(16);
   color: $black;
   font-weight: $normal;
-  line-height: 1.6;
+  line-height: 1;
   text-align: left;
   margin-top: rem(22);
-  padding-left: rem(16 + 20);//QとQのmargin
-  padding-right: rem(16 + 20);//プラスとmargin
+  padding-left: rem(36); // Qマークの位置に合わせる
+  padding-right: rem(20); // 右側の余白
+}
+
+/* 開いているとき（aria-expanded=trueのとき） */
+.faq-list__question[aria-expanded="true"] + .faq-list__answer {
+  display: block; // 回答を表示
 }
 

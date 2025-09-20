@@ -362,6 +362,38 @@ $(function () {
   }
 });
 
+/* --------------------------------------------
+/* faq.html (FAQページ）
+// FAQアコーディオンの開閉機能
+/* -------------------------------------------- */
+$(function () {
+  // FAQページのみで実行
+  if ($('.faq-list__question').length) {
+    const $faqQuestions = $('.faq-list__question');
+    
+    // FAQ質問のクリックイベント
+    $faqQuestions.on('click', function () {
+      const $question = $(this);
+      const $answer = $question.next('.faq-list__answer');
+      const isExpanded = $question.attr('aria-expanded') === 'true';
+      
+      if (isExpanded) {
+        // 閉じる処理
+        $question.attr('aria-expanded', 'false');
+        $answer.slideUp(300);
+      } else {
+        // 開く処理
+        $question.attr('aria-expanded', 'true');
+        $answer.slideDown(300);
+      }
+    });
+  }
+});
+
+
+
+
+
 
   
   /* --------------------------------------------
