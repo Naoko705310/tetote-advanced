@@ -1,5 +1,9 @@
 @use "global" as *;
 
+.staff-interview__section {
+  margin-top: rem(23);
+}
+
 .staff-interview__title {
   font-family: $base-font-family;
   font-size: rem(20);
@@ -20,7 +24,7 @@
   top: 50%;
   transform: translateY(-50%); // タイトル中央に揃える
   width: rem(216);
-  height: 2px; // 線の太さ（デザインに合わせて調整）
+  height: 1px; // 線の太さ（デザインに合わせて調整）
   background-color: $black;
 }
 
@@ -30,17 +34,19 @@
 }
 
 .staff-interview__text {
+  max-width: rem(696);
   font-family: $base-font-family;
   font-size: rem(16);
   color: $black;
   font-weight: $normal;
   line-height: 1.8;
-  margin-top: rem(20);
-  @include mq(md) {
-    margin-top: rem(50);
-  }
+  margin-top: rem(50);
+}
+
+.staff-interview__job-details {
+  margin-top: rem(23);
 }
 
 .staff-interview__items {
-  margin-top: rem(23);
+  // margin-top: rem(23);
 }

@@ -1,23 +1,53 @@
 @use "global" as *;
 
 // スタッフ紹介ページだけFVが他と異なる
-.staff-details-fv {
+
+// 下層ページ共通のpage-fvのz-index:-1;を打ち消し
+// ＊要素よりfvが前に来ていて要素を選択できなかった
+.page-fv.staff-details-fv {
+  position: relative;
+  z-index: 3;
+  background-image: none;// staff-detailsのページはFV背景画像なし
   background-color: $color-accent-sub;
+}
+
+// スタッフ詳細ページのFVのpaddingを上書き
+.staff-details-fv__inner.page-fv__inner.inner {
+  padding:  0 rem(24);
 }
 
 .staff-details-fv__contents-wrapper {
   width: 100%;
   max-width: rem(600);
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: rem(40);
+  padding: rem(43) 0;
   @include mq(md) {
     max-width: 100%;
-    flex-direction: row;
+    grid-template-columns: 1fr rem(286);
     gap: rem(85);
   }
 }
+
+.staff-details-fv__body {
+  margin-top: rem(34);
+}
+
+// スタッフの写真
+.staff-details-fv__image {
+  width: rem(286);
+  margin: 0 auto;
+  aspect-ratio: 286/368;
+}
+
+.staff-details-fv__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 
 // staff-cardと同じタイトル
 .staff-details-fv__title {
@@ -30,7 +60,7 @@
   background-color: $white;
   padding: rem(3) rem(10);
   @include mq(md) {
-    font-size: rem(32);
+    font-size: rem(36);
   }
 }
 
