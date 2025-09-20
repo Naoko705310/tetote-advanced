@@ -7,7 +7,7 @@
 }
 
 .page-entry__inner.inner {
-  max-width: rem(880);
+  max-width: rem(880 + 48);//880+(24*2)=928
   margin: 0 auto;
 }
 
@@ -26,12 +26,18 @@
   }
 }
 
-.page-entry__header {
-@include mq(md) {
-  max-width: rem(530);//要確認 カンプでは510px
-  margin: 0 auto;
+.page-entry__heading-wrapper {
+  @include mq(md) {
+    text-align: center;
+  }
 }
-
+.page-entry__heading {
+@include mq(md) {
+  // max-width: rem(530);//要確認 カンプでは510px
+  // margin: 0 auto;
+  display: inline-block;
+  text-align: center;
+}
 }
 
 .page-entry__title--en {
@@ -53,7 +59,7 @@
   color: $black;
   font-weight: $bold;
   line-height: 1.2;
-  text-align: center;
+  text-align: left;
   margin-top: rem(29);
   @include mq(md) {
     font-size: rem(32);
@@ -72,6 +78,7 @@
   color: $black;
   font-weight: $normal;
   line-height: 1.5;
+  text-align: left;
   margin-top: rem(20);
   @include mq(md) {
     margin-top: rem(51);
