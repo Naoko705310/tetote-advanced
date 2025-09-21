@@ -1,9 +1,11 @@
 @use "global" as *;
 
-.page-blog-details__blog-article {
-  background-color: $color-accent-sub;
-  padding-top: rem(34);
-  padding-bottom: rem(139);
+// ブログ記事の幅
+.blog-article__inner.inner {
+  max-width: rem(800 + 32);
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 rem(16);
 }
 
 // ブログ記事の白背景部分
@@ -106,9 +108,27 @@
   font-weight: $normal;
   line-height: 1.8;
   margin-top: rem(20);
-  list-style-type: disc; // 黒丸を追加
-  padding-left: rem(20); // マーカーのための余白
+  list-style: none; // デフォルトのマーカーを削除
+  padding-left: 0; // パディングをリセット
   @include mq(md) {
     margin-top: rem(50);
   }
+}
+
+// リストアイテムにカスタムマーカーを追加
+.blog-article__contents li {
+  position: relative;
+  // margin-left: rem(16); // マーカーのための余白
+  padding-left: rem(16);
+}
+
+.blog-article__contents li::before {
+  content: "•";
+  position: absolute;
+  left: rem(8);
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: rem(10); // 小さなマーカー
+  color: $black;
+  line-height: 1.8; // テキストの行間と合わせる
 }

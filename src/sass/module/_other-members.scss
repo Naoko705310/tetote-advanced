@@ -2,12 +2,16 @@
 
 // その他のメンバー
 
+.other-members__innter.inner {
+  padding-top: rem(66);
+}
+
 .other-members__title {
   font-family: $base-font-family;
   font-size: rem(20);
   color: $black;
   font-weight: $bold;
-  line-height: 1;
+  line-height: 1.8;
   text-align: center;
   @include mq(md) {
     font-size: rem(32);
@@ -21,6 +25,7 @@
   margin-top: rem(50);
   @include mq(md) {
     grid-template-columns: repeat(3, 1fr);
+    padding: 0 rem(19);
   }
 }
 

@@ -3,6 +3,16 @@
 // ブログ詳細ページはFVがないので、パンクズにmargin-topをつける
 .page-blog-details__breadcrumb.breadcrumb {
   margin-top: rem(61);
+  @include mq(md) {
+    margin-top: rem(121);
+  }
+}
+
+// ブログ記事詳細背景色
+.page-blog-details__blog-article {
+  background-color: $color-accent-sub;
+  padding-top: rem(34);
+  padding-bottom: rem(139);
 }
 
 // ブログ詳細ページは、CTA上のmarginなし

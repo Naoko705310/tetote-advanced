@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.staff-interview__section {
+.staff-interview__section:not(:first-child) {
   margin-top: rem(23);
 }
 

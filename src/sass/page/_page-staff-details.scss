@@ -11,7 +11,7 @@
   margin-top: rem(80);
   padding-bottom: rem(23);
   @include mq(md) {
-    padding: 0 rem(24);
+    padding: 0 rem(24) rem(23) rem(24);
     display: grid;
     grid-template-columns: 73.335% 1fr; //710/1024→ピクパ調整
     gap: rem(56);
@@ -30,5 +30,5 @@
 }
 
 .page-staff-details__other-members {
-  margin-top: rem(18 + 66); //カンプが、セクションの間に18pxの余白がある
+  margin-top: rem(18);
 }
