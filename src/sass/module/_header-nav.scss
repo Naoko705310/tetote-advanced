@@ -5,7 +5,10 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  overflow-y: auto;     // ナビ内でスクロール可能
+  // height: 100%;
   // min-height: 100vh; // ページの高さが狭いときも背景で覆う
   background-color: $color-accent-sub;
   opacity: 0;
@@ -92,7 +95,7 @@
 
 .header-nav__item {
   border-bottom: 1px solid $color-accent;
-  padding: rem(13) 0;
+  padding: rem(10) 0;
   @include mq(md) {
     padding: rem(23) 0;
   }
@@ -157,4 +160,10 @@
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+}
+
+
+/* ハンバーガーメニュー開閉時のスクロール制御 */
+body.is-fixed {
+  overflow-y: visible;  // スクロールを完全に許可
 }

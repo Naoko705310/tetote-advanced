@@ -3,9 +3,11 @@
 // キャリアパスに沿った研修制度を用意
 
 .career-path__inner {
-  padding: 0 rem(22);
-  
+  @include mq(md) {
+    padding: 0 rem(22);
+  }
 }
+
 .career-path__title {
   font-family: $base-font-family;
   font-size: rem(20);

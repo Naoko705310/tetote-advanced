@@ -4,6 +4,13 @@
 
 }
 
+.page-benefits__inner {
+  padding-top: rem(66);
+  @include mq(md) {
+    padding-top: rem(140);
+  }
+}
+
 .page-benefits__users-voice {
   margin-top: rem(70);
   @include mq(md) {
